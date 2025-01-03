@@ -3,4 +3,5 @@
 </a>
 
 <!--START_SECTION:badges-->
+[![Update badges](https://github.com/devy1540/devy1540/actions/workflows/main.yml/badge.svg)](https://github.com/devy1540/devy1540/actions/workflows/main.yml)
 <!--END_SECTION:badges-->
