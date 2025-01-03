@@ -2,14 +2,14 @@ name: Update badges
 
 on:
   schedule:
-    # Runs at 2am UTC
-    - cron: "0 2 * * *"
+    # Runs at 0am UTC every day
+    - cron: "0 0 * * *"
 jobs:
   update-readme:
     name: Update Readme with badges
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Badges - Readme
         uses: pemtajo/badge-readme@main
-        with:       
-          CREDLY_USER: hyukjun-yoon # optional, but default will use the same from github
