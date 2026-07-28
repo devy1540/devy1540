@@ -79,9 +79,9 @@ I build reliable systems, clear boundaries, and practical tools for developers.
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devy1540/devy1540/output/github-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/devy1540/devy1540/output/github-snake.svg">
-    <img src="https://raw.githubusercontent.com/devy1540/devy1540/output/github-snake.svg" alt="devy1540 contribution trail">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devy1540/devy1540/refs/heads/output/github-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/devy1540/devy1540/refs/heads/output/github-snake.svg">
+    <img src="https://raw.githubusercontent.com/devy1540/devy1540/refs/heads/output/github-snake.svg" alt="devy1540 contribution trail">
   </picture>
 </div>
 
