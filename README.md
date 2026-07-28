@@ -14,13 +14,11 @@
 I build reliable systems, clear boundaries, and practical tools for developers.
 
 <p>
-  <a href="https://devy1540.dev">
-    <img src="https://img.shields.io/badge/Engineering_Blog-devy1540.dev-0F172A?style=flat-square" alt="Engineering Blog">
-  </a>
-  <a href="https://devy1540.dev/rss.xml">
-    <img src="https://img.shields.io/badge/RSS-Follow-FF6600?style=flat-square&logo=rss&logoColor=white" alt="RSS">
-  </a>
-  <img src="https://img.shields.io/badge/Seoul-KR-0891B2?style=flat-square" alt="Seoul, Korea">
+  <a href="https://devy1540.dev">Engineering Blog</a>
+  &nbsp;·&nbsp;
+  <a href="https://devy1540.dev/rss.xml">RSS</a>
+  &nbsp;·&nbsp;
+  Seoul, Korea
 </p>
 
 </div>
@@ -75,20 +73,7 @@ I build reliable systems, clear boundaries, and practical tools for developers.
 
 ## Toolbox
 
-<p>
-  <img src="https://img.shields.io/badge/Java-0F172A?style=flat-square&logo=openjdk&logoColor=white" alt="Java">
-  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">
-  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
-  <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust">
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
-  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" alt="Spring Boot">
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes">
-  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions">
-  <img src="https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white" alt="Prometheus">
-  <img src="https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white" alt="Grafana">
-</p>
+`Java` · `Kotlin` · `Go` · `Rust` · `TypeScript` · `Spring Boot` · `PostgreSQL` · `Docker` · `Kubernetes` · `GitHub Actions` · `Prometheus` · `Grafana`
 
 ## Contribution trail
 
