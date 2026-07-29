@@ -1,8 +1,8 @@
 <!-- Theme-aware terminal banner -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devy1540/devy1540/main/dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/devy1540/devy1540/main/light.svg">
-  <img alt="Hyukjun Yoon - backend and platform engineer" src="https://raw.githubusercontent.com/devy1540/devy1540/main/light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./light.svg">
+  <img alt="Hyukjun Yoon - backend and platform engineer" src="./light.svg">
 </picture>
 
 <!-- GitHub activity -->
@@ -13,14 +13,14 @@
   </picture>
   <br>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devy1540/devy1540/main/stats-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/devy1540/devy1540/main/stats-light.svg">
-    <img width="49%" src="https://raw.githubusercontent.com/devy1540/devy1540/main/stats-light.svg" alt="devy1540 public GitHub activity">
+    <source media="(prefers-color-scheme: dark)" srcset="./stats-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./stats-light.svg">
+    <img width="49%" src="./stats-light.svg" alt="devy1540 public GitHub activity">
   </picture>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devy1540/devy1540/main/languages-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/devy1540/devy1540/main/languages-light.svg">
-    <img width="49%" src="https://raw.githubusercontent.com/devy1540/devy1540/main/languages-light.svg" alt="Primary languages across public repositories">
+    <source media="(prefers-color-scheme: dark)" srcset="./languages-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./languages-light.svg">
+    <img width="49%" src="./languages-light.svg" alt="Primary languages across public repositories">
   </picture>
 </div>
 
@@ -37,7 +37,7 @@
 
 <!-- Selected public projects -->
 <div align="center">
-  <img width="100%" src="https://raw.githubusercontent.com/devy1540/devy1540/main/projects.svg" alt="Selected public projects">
+  <img width="100%" src="./projects.svg" alt="Selected public projects">
 </div>
 
 <br>
