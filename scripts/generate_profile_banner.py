@@ -21,7 +21,9 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE = ROOT / "assets" / "profile-portrait.jpg"
 GRID_SIZE = 144
 GROUP_COUNT = 24
-TRAVELLER_DOTS = 720
+TRAVELLER_DOTS = 1200
+TRAVELLER_RADIUS = 1.25
+CODE_STROKE_WIDTH = 3
 CELL_SIZE = 2.45
 PORTRAIT_ORIGIN = (72.0, 113.0)
 LOOP_SECONDS = 14.2
@@ -167,14 +169,25 @@ def code_target_points(count: int, seed: int) -> list[tuple[int, int]]:
     mask = Image.new("L", (GRID_SIZE, GRID_SIZE), 0)
     draw = ImageDraw.Draw(mask)
     font = font_for_size(44)
-    bbox = draw.textbbox((0, 0), "</>", font=font, stroke_width=1)
+    bbox = draw.textbbox(
+        (0, 0),
+        "</>",
+        font=font,
+        stroke_width=CODE_STROKE_WIDTH,
+    )
     width = bbox[2] - bbox[0]
     height = bbox[3] - bbox[1]
     position = (
         (GRID_SIZE - width) / 2 - bbox[0],
         (GRID_SIZE - height) / 2 - bbox[1],
     )
-    draw.text(position, "</>", fill=255, font=font, stroke_width=1)
+    draw.text(
+        position,
+        "</>",
+        fill=255,
+        font=font,
+        stroke_width=CODE_STROKE_WIDTH,
+    )
     return sample_mask_points(mask, count, seed)
 
 
@@ -288,12 +301,15 @@ def traveller_circles(
         kubernetes_icon_target_points(TRAVELLER_DOTS, seed + 3),
     )
 
-    key_times = "0;0.211;0.303;0.444;0.535;0.676;0.768;0.908;1"
-    opacity = "0;0;1;1;1;1;1;1;0"
+    # Portrait/icon handoffs are discrete. The final hidden Kubernetes state lets
+    # the dots return to their portrait coordinates without exposing a sparse
+    # 1,200-dot portrait over the full 8,341-dot portrait layer.
+    key_times = "0;0.211;0.303;0.444;0.535;0.676;0.768;0.908;0.909;1"
+    opacity = "0;0;1;1;1;1;1;1;0;0"
     fill_values = (
         f'{theme["border"]};{theme["border"]};#F89820;#F89820;'
         f'{theme["border"]};{theme["border"]};#326CE5;#326CE5;'
-        f'{theme["border"]}'
+        f'#326CE5;{theme["border"]}'
     )
     circles = []
     for index in range(TRAVELLER_DOTS):
@@ -306,6 +322,7 @@ def traveller_circles(
             code[index],
             kubernetes[index],
             kubernetes[index],
+            kubernetes[index],
             start[index],
         )
         svg_states = [svg_point(point) for point in states]
@@ -313,7 +330,8 @@ def traveller_circles(
         ys = ";".join(f"{point[1]:.2f}" for point in svg_states)
         start_x, start_y = svg_states[0]
         circles.append(
-            f'<circle cx="{start_x:.2f}" cy="{start_y:.2f}" r="1.45" opacity="0">'
+            f'<circle cx="{start_x:.2f}" cy="{start_y:.2f}" '
+            f'r="{TRAVELLER_RADIUS:.2f}" opacity="0">'
             f'<animate attributeName="cx" values="{xs}" keyTimes="{key_times}" '
             f'begin="{LOOP_BEGIN_SECONDS}s" dur="{LOOP_SECONDS}s" '
             'repeatCount="indefinite"/>'
@@ -322,7 +340,8 @@ def traveller_circles(
             'repeatCount="indefinite"/>'
             f'<animate attributeName="opacity" values="{opacity}" '
             f'keyTimes="{key_times}" begin="{LOOP_BEGIN_SECONDS}s" '
-            f'dur="{LOOP_SECONDS}s" repeatCount="indefinite"/>'
+            f'dur="{LOOP_SECONDS}s" calcMode="discrete" '
+            'repeatCount="indefinite"/>'
             "</circle>"
         )
     return (
@@ -428,9 +447,9 @@ def render_svg(mode: str, points: list[tuple[int, int]], seed: int) -> str:
       to {{ opacity: 1; transform: translateY(0); }}
     }}
     @keyframes portrait-cycle {{
-      0%, 21.1% {{ opacity: 1; }}
-      30.3%, 90.8% {{ opacity: 0; }}
-      100% {{ opacity: 1; }}
+      0%, 30.299% {{ opacity: 1; }}
+      30.3%, 90.899% {{ opacity: 0; }}
+      90.9%, 100% {{ opacity: 1; }}
     }}
     @keyframes pulse {{
       0%, 100% {{ opacity: .5; transform: scale(.8); }}
