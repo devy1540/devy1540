@@ -288,12 +288,10 @@ def svg_point(point: tuple[int, int]) -> tuple[float, float]:
 
 
 def traveller_circles(
-    points: list[tuple[int, int]],
+    start: list[tuple[int, int]],
     theme: dict[str, str],
     seed: int,
 ) -> str:
-    rng = random.Random(seed)
-    start = rng.sample(points, TRAVELLER_DOTS)
     java = greedy_match(start, java_icon_target_points(TRAVELLER_DOTS, seed + 1))
     code = greedy_match(java, code_target_points(TRAVELLER_DOTS, seed + 2))
     kubernetes = greedy_match(
@@ -301,15 +299,11 @@ def traveller_circles(
         kubernetes_icon_target_points(TRAVELLER_DOTS, seed + 3),
     )
 
-    # Portrait/icon handoffs are discrete. The final hidden Kubernetes state lets
-    # the dots return to their portrait coordinates without exposing a sparse
-    # 1,200-dot portrait over the full 8,341-dot portrait layer.
-    key_times = "0;0.211;0.303;0.444;0.535;0.676;0.768;0.908;0.909;1"
-    opacity = "0;0;1;1;1;1;1;1;0;0"
+    key_times = "0;0.211;0.303;0.444;0.535;0.676;0.768;0.908;1"
     fill_values = (
-        f'{theme["border"]};{theme["border"]};#F89820;#F89820;'
+        f'{theme["portrait"]};{theme["portrait"]};#F89820;#F89820;'
         f'{theme["border"]};{theme["border"]};#326CE5;#326CE5;'
-        f'#326CE5;{theme["border"]}'
+        f'{theme["portrait"]}'
     )
     circles = []
     for index in range(TRAVELLER_DOTS):
@@ -322,7 +316,6 @@ def traveller_circles(
             code[index],
             kubernetes[index],
             kubernetes[index],
-            kubernetes[index],
             start[index],
         )
         svg_states = [svg_point(point) for point in states]
@@ -331,21 +324,17 @@ def traveller_circles(
         start_x, start_y = svg_states[0]
         circles.append(
             f'<circle cx="{start_x:.2f}" cy="{start_y:.2f}" '
-            f'r="{TRAVELLER_RADIUS:.2f}" opacity="0">'
+            f'r="{TRAVELLER_RADIUS:.2f}">'
             f'<animate attributeName="cx" values="{xs}" keyTimes="{key_times}" '
             f'begin="{LOOP_BEGIN_SECONDS}s" dur="{LOOP_SECONDS}s" '
             'repeatCount="indefinite"/>'
             f'<animate attributeName="cy" values="{ys}" keyTimes="{key_times}" '
             f'begin="{LOOP_BEGIN_SECONDS}s" dur="{LOOP_SECONDS}s" '
             'repeatCount="indefinite"/>'
-            f'<animate attributeName="opacity" values="{opacity}" '
-            f'keyTimes="{key_times}" begin="{LOOP_BEGIN_SECONDS}s" '
-            f'dur="{LOOP_SECONDS}s" calcMode="discrete" '
-            'repeatCount="indefinite"/>'
             "</circle>"
         )
     return (
-        f'<g class="traveller-layer" fill="{theme["border"]}">'
+        f'<g class="traveller-layer" fill="{theme["portrait"]}">'
         f'<animate attributeName="fill" values="{fill_values}" '
         f'keyTimes="{key_times}" begin="{LOOP_BEGIN_SECONDS}s" '
         f'dur="{LOOP_SECONDS}s" repeatCount="indefinite"/>'
@@ -377,13 +366,24 @@ def text(x: int, y: int, value: str, css_class: str, anchor: str = "start") -> s
 
 def render_svg(mode: str, points: list[tuple[int, int]], seed: int) -> str:
     theme = THEMES[mode]
-    paths = group_paths(points, origin_x=72, origin_y=113)
+    traveller_points = random.Random(seed).sample(points, TRAVELLER_DOTS)
+    traveller_point_set = set(traveller_points)
+    stationary_points = [
+        point for point in points if point not in traveller_point_set
+    ]
+    paths = group_paths(stationary_points, origin_x=72, origin_y=113)
     portrait_groups = "\n".join(
         f'<path class="portrait-dots dots-{index}" d="{path}"/>'
         for index, path in enumerate(paths)
         if path
     )
-    travellers = traveller_circles(points, theme, seed)
+    full_portrait_paths = group_paths(points, origin_x=72, origin_y=113)
+    reduced_portrait_groups = "\n".join(
+        f'<path class="reduced-portrait-dots" d="{path}"/>'
+        for path in full_portrait_paths
+        if path
+    )
+    travellers = traveller_circles(traveller_points, theme, seed)
 
     rows = [
         ("SUBJECT", "YOON HYEOKJUN"),
@@ -431,6 +431,11 @@ def render_svg(mode: str, points: list[tuple[int, int]], seed: int) -> str:
     .portrait-cycle {{
       animation: portrait-cycle {LOOP_SECONDS}s linear {LOOP_BEGIN_SECONDS}s infinite;
     }}
+    .traveller-layer {{
+      animation: dots-in .9s cubic-bezier(.2,.8,.2,1) both;
+    }}
+    .reduced-portrait {{ display: none; }}
+    .reduced-portrait-dots {{ fill: {theme["portrait"]}; }}
     .live-dot {{
       fill: {theme["danger"]};
       transform-origin: 1102px 45px;
@@ -447,9 +452,9 @@ def render_svg(mode: str, points: list[tuple[int, int]], seed: int) -> str:
       to {{ opacity: 1; transform: translateY(0); }}
     }}
     @keyframes portrait-cycle {{
-      0%, 30.299% {{ opacity: 1; }}
-      30.3%, 90.899% {{ opacity: 0; }}
-      90.9%, 100% {{ opacity: 1; }}
+      0%, 21.1% {{ opacity: 1; }}
+      30.3%, 90.8% {{ opacity: 0; }}
+      100% {{ opacity: 1; }}
     }}
     @keyframes pulse {{
       0%, 100% {{ opacity: .5; transform: scale(.8); }}
@@ -461,12 +466,14 @@ def render_svg(mode: str, points: list[tuple[int, int]], seed: int) -> str:
       50% {{ transform: translateY(-8px) rotate(2deg); }}
     }}
     @media (prefers-reduced-motion: reduce) {{
-      .portrait-dots, .portrait-cycle, .live-dot, .cursor, .float-mark {{
+      .portrait-dots, .portrait-cycle, .traveller-layer,
+      .live-dot, .cursor, .float-mark {{
         animation: none !important;
         opacity: 1 !important;
         transform: none !important;
       }}
-      .traveller-layer {{ display: none !important; }}
+      .portrait-cycle, .traveller-layer {{ display: none !important; }}
+      .reduced-portrait {{ display: inline !important; }}
     }}
   </style>
 
@@ -491,6 +498,9 @@ def render_svg(mode: str, points: list[tuple[int, int]], seed: int) -> str:
   <g clip-path="url(#portrait-clip)">
     <g class="portrait-cycle">
       {portrait_groups}
+    </g>
+    <g class="reduced-portrait">
+      {reduced_portrait_groups}
     </g>
     {travellers}
   </g>
