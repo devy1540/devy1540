@@ -20,9 +20,9 @@ from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE = ROOT / "assets" / "profile-portrait.jpg"
 GRID_SIZE = 144
-GROUP_COUNT = 24
-TRAVELLER_DOTS = 1200
-TRAVELLER_RADIUS = 1.25
+MORPH_DOTS = 1000
+MORPH_RADIUS = 1.35
+PORTRAIT_SAMPLE_BLOCK = 8
 CODE_STROKE_WIDTH = 3
 CELL_SIZE = 2.45
 PORTRAIT_ORIGIN = (72.0, 113.0)
@@ -120,6 +120,84 @@ def prepare_dither(source: Path, mode: str) -> list[tuple[int, int]]:
             if ink:
                 points.append((x, y))
     return points
+
+
+def stratified_portrait_points(
+    points: list[tuple[int, int]],
+    count: int,
+    seed: int,
+) -> list[tuple[int, int]]:
+    """Reduce the portrait while retaining its silhouette and tonal density."""
+    if len(points) < count:
+        raise RuntimeError(
+            f"Portrait produced {len(points)} pixels; {count} required"
+        )
+
+    buckets: dict[tuple[int, int], list[tuple[int, int]]] = {}
+    for point in points:
+        bucket = (
+            point[0] // PORTRAIT_SAMPLE_BLOCK,
+            point[1] // PORTRAIT_SAMPLE_BLOCK,
+        )
+        buckets.setdefault(bucket, []).append(point)
+
+    if len(buckets) > count:
+        raise RuntimeError(
+            f"Portrait spans {len(buckets)} sampling blocks; {count} dots required"
+        )
+
+    rng = random.Random(seed)
+    selected: list[tuple[int, int]] = []
+    remaining_candidates: dict[tuple[int, int], list[tuple[int, int]]] = {}
+
+    for bucket in sorted(buckets):
+        bucket_points = buckets[bucket]
+        center_x = (bucket[0] + 0.5) * PORTRAIT_SAMPLE_BLOCK
+        center_y = (bucket[1] + 0.5) * PORTRAIT_SAMPLE_BLOCK
+        representative = min(
+            bucket_points,
+            key=lambda point: (
+                (point[0] - center_x) ** 2 + (point[1] - center_y) ** 2,
+                point[1],
+                point[0],
+            ),
+        )
+        selected.append(representative)
+        remaining_candidates[bucket] = [
+            point for point in bucket_points if point != representative
+        ]
+
+    remaining = count - len(selected)
+    capacity = sum(len(bucket) for bucket in remaining_candidates.values())
+    quotas: dict[tuple[int, int], int] = {}
+    fractions = []
+
+    for bucket, bucket_points in remaining_candidates.items():
+        exact = remaining * len(bucket_points) / capacity if capacity else 0
+        quota = min(len(bucket_points), math.floor(exact))
+        quotas[bucket] = quota
+        fractions.append((exact - quota, rng.random(), bucket))
+
+    unallocated = remaining - sum(quotas.values())
+    for _, _, bucket in sorted(fractions, reverse=True):
+        if unallocated == 0:
+            break
+        if quotas[bucket] < len(remaining_candidates[bucket]):
+            quotas[bucket] += 1
+            unallocated -= 1
+
+    if unallocated:
+        raise RuntimeError(f"Unable to allocate {unallocated} portrait dots")
+
+    for bucket in sorted(remaining_candidates):
+        bucket_points = remaining_candidates[bucket]
+        quota = quotas[bucket]
+        if quota:
+            selected.extend(rng.sample(bucket_points, quota))
+
+    if len(selected) != count or len(set(selected)) != count:
+        raise RuntimeError("Portrait sampling did not produce unique morph dots")
+    return selected
 
 
 def sample_mask_points(mask: Image.Image, count: int, seed: int) -> list[tuple[int, int]]:
@@ -260,24 +338,29 @@ def kubernetes_icon_target_points(count: int, seed: int) -> list[tuple[int, int]
     return sample_mask_points(mask, count, seed)
 
 
-def greedy_match(
-    source: list[tuple[int, int]],
-    target: list[tuple[int, int]],
-) -> list[tuple[int, int]]:
-    """Match source dots to nearby target dots with deterministic transport."""
-    available = set(range(len(target)))
-    matched = []
-    for source_x, source_y in source:
-        target_index = min(
-            available,
-            key=lambda index: (
-                (target[index][0] - source_x) ** 2
-                + (target[index][1] - source_y) ** 2
-            ),
-        )
-        matched.append(target[target_index])
-        available.remove(target_index)
-    return matched
+def hilbert_index(point: tuple[int, int], bits: int = 8) -> int:
+    """Return a locality-preserving index for a point on the profile grid."""
+    x, y = point
+    distance = 0
+    side = 1 << (bits - 1)
+    extent = (1 << bits) - 1
+
+    while side:
+        right = 1 if x & side else 0
+        upper = 1 if y & side else 0
+        distance += side * side * ((3 * right) ^ upper)
+        if upper == 0:
+            if right == 1:
+                x = extent - x
+                y = extent - y
+            x, y = y, x
+        side >>= 1
+    return distance
+
+
+def spatially_order(points: list[tuple[int, int]]) -> list[tuple[int, int]]:
+    """Keep neighboring dots near each other throughout every morph."""
+    return sorted(points, key=lambda point: (hilbert_index(point), point[1], point[0]))
 
 
 def svg_point(point: tuple[int, int]) -> tuple[float, float]:
@@ -287,36 +370,37 @@ def svg_point(point: tuple[int, int]) -> tuple[float, float]:
     )
 
 
-def traveller_circles(
-    start: list[tuple[int, int]],
+def morph_circles(
+    portrait: list[tuple[int, int]],
     theme: dict[str, str],
     seed: int,
 ) -> str:
-    java = greedy_match(start, java_icon_target_points(TRAVELLER_DOTS, seed + 1))
-    code = greedy_match(java, code_target_points(TRAVELLER_DOTS, seed + 2))
-    kubernetes = greedy_match(
-        code,
-        kubernetes_icon_target_points(TRAVELLER_DOTS, seed + 3),
+    portrait = spatially_order(portrait)
+    java = spatially_order(java_icon_target_points(MORPH_DOTS, seed + 1))
+    code = spatially_order(code_target_points(MORPH_DOTS, seed + 2))
+    kubernetes = spatially_order(
+        kubernetes_icon_target_points(MORPH_DOTS, seed + 3)
     )
 
     key_times = "0;0.211;0.303;0.444;0.535;0.676;0.768;0.908;1"
+    key_splines = ";".join(["0.4 0 0.2 1"] * 8)
     fill_values = (
         f'{theme["portrait"]};{theme["portrait"]};#F89820;#F89820;'
         f'{theme["border"]};{theme["border"]};#326CE5;#326CE5;'
         f'{theme["portrait"]}'
     )
     circles = []
-    for index in range(TRAVELLER_DOTS):
+    for index in range(MORPH_DOTS):
         states = (
-            start[index],
-            start[index],
+            portrait[index],
+            portrait[index],
             java[index],
             java[index],
             code[index],
             code[index],
             kubernetes[index],
             kubernetes[index],
-            start[index],
+            portrait[index],
         )
         svg_states = [svg_point(point) for point in states]
         xs = ";".join(f"{point[0]:.2f}" for point in svg_states)
@@ -324,37 +408,26 @@ def traveller_circles(
         start_x, start_y = svg_states[0]
         circles.append(
             f'<circle cx="{start_x:.2f}" cy="{start_y:.2f}" '
-            f'r="{TRAVELLER_RADIUS:.2f}">'
+            f'r="{MORPH_RADIUS:.2f}">'
             f'<animate attributeName="cx" values="{xs}" keyTimes="{key_times}" '
             f'begin="{LOOP_BEGIN_SECONDS}s" dur="{LOOP_SECONDS}s" '
+            f'calcMode="spline" keySplines="{key_splines}" '
             'repeatCount="indefinite"/>'
             f'<animate attributeName="cy" values="{ys}" keyTimes="{key_times}" '
             f'begin="{LOOP_BEGIN_SECONDS}s" dur="{LOOP_SECONDS}s" '
+            f'calcMode="spline" keySplines="{key_splines}" '
             'repeatCount="indefinite"/>'
             "</circle>"
         )
     return (
-        f'<g class="traveller-layer" fill="{theme["portrait"]}">'
+        f'<g class="morph-layer" fill="{theme["portrait"]}">'
         f'<animate attributeName="fill" values="{fill_values}" '
         f'keyTimes="{key_times}" begin="{LOOP_BEGIN_SECONDS}s" '
-        f'dur="{LOOP_SECONDS}s" repeatCount="indefinite"/>'
+        f'dur="{LOOP_SECONDS}s" calcMode="spline" '
+        f'keySplines="{key_splines}" repeatCount="indefinite"/>'
         f'{"".join(circles)}'
         "</g>"
     )
-
-
-def group_paths(points: list[tuple[int, int]], origin_x: float, origin_y: float) -> list[str]:
-    cell = CELL_SIZE
-    dot = 1.78
-    groups = [[] for _ in range(GROUP_COUNT)]
-
-    for x, y in points:
-        group = ((x * 73) ^ (y * 151) ^ (x * y * 17)) % GROUP_COUNT
-        px = origin_x + x * cell
-        py = origin_y + y * cell
-        groups[group].append(f"M{px:.2f},{py:.2f}h{dot:.2f}v{dot:.2f}h-{dot:.2f}z")
-
-    return ["".join(group) for group in groups]
 
 
 def text(x: int, y: int, value: str, css_class: str, anchor: str = "start") -> str:
@@ -366,24 +439,16 @@ def text(x: int, y: int, value: str, css_class: str, anchor: str = "start") -> s
 
 def render_svg(mode: str, points: list[tuple[int, int]], seed: int) -> str:
     theme = THEMES[mode]
-    traveller_points = random.Random(seed).sample(points, TRAVELLER_DOTS)
-    traveller_point_set = set(traveller_points)
-    stationary_points = [
-        point for point in points if point not in traveller_point_set
-    ]
-    paths = group_paths(stationary_points, origin_x=72, origin_y=113)
-    portrait_groups = "\n".join(
-        f'<path class="portrait-dots dots-{index}" d="{path}"/>'
-        for index, path in enumerate(paths)
-        if path
+    portrait_points = stratified_portrait_points(points, MORPH_DOTS, seed)
+    ordered_portrait = spatially_order(portrait_points)
+    static_portrait = "".join(
+        (
+            f'<circle cx="{svg_point(point)[0]:.2f}" '
+            f'cy="{svg_point(point)[1]:.2f}" r="{MORPH_RADIUS:.2f}"/>'
+        )
+        for point in ordered_portrait
     )
-    full_portrait_paths = group_paths(points, origin_x=72, origin_y=113)
-    reduced_portrait_groups = "\n".join(
-        f'<path class="reduced-portrait-dots" d="{path}"/>'
-        for path in full_portrait_paths
-        if path
-    )
-    travellers = traveller_circles(traveller_points, theme, seed)
+    morph = morph_circles(portrait_points, theme, seed)
 
     rows = [
         ("SUBJECT", "YOON HYEOKJUN"),
@@ -402,14 +467,9 @@ def render_svg(mode: str, points: list[tuple[int, int]], seed: int) -> str:
         )
         row_svg.append(text(782, y, value, "value"))
 
-    delays = "\n".join(
-        f".dots-{index} {{ animation-delay: {index * 0.028:.3f}s; }}"
-        for index in range(GROUP_COUNT)
-    )
-
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
   <title id="title">devy1540 - backend and platform engineer</title>
-  <desc id="desc">Terminal-style profile banner with a dithered portrait and current engineering focus.</desc>
+  <desc id="desc">Terminal-style profile banner with one dot field morphing between a portrait, Java, code, and Kubernetes.</desc>
   <style>
     :root {{
       color-scheme: {mode};
@@ -424,18 +484,11 @@ def render_svg(mode: str, points: list[tuple[int, int]], seed: int) -> str:
     .label {{ fill: {theme["muted"]}; font-size: 13px; letter-spacing: 1px; }}
     .value {{ fill: {theme["text"]}; font-size: 14px; font-weight: 600; }}
     .leader {{ stroke: {theme["grid"]}; stroke-width: 1; stroke-dasharray: 2 5; }}
-    .portrait-dots {{
-      fill: {theme["portrait"]};
-      animation: dots-in .9s cubic-bezier(.2,.8,.2,1) both;
-    }}
-    .portrait-cycle {{
-      animation: portrait-cycle {LOOP_SECONDS}s linear {LOOP_BEGIN_SECONDS}s infinite;
-    }}
-    .traveller-layer {{
+    .morph-layer {{
       animation: dots-in .9s cubic-bezier(.2,.8,.2,1) both;
     }}
     .reduced-portrait {{ display: none; }}
-    .reduced-portrait-dots {{ fill: {theme["portrait"]}; }}
+    .reduced-portrait {{ fill: {theme["portrait"]}; }}
     .live-dot {{
       fill: {theme["danger"]};
       transform-origin: 1102px 45px;
@@ -446,15 +499,9 @@ def render_svg(mode: str, points: list[tuple[int, int]], seed: int) -> str:
       transform-origin: 418px 116px;
       animation: float 7s ease-in-out infinite;
     }}
-    {delays}
     @keyframes dots-in {{
       from {{ opacity: 0; transform: translateY(3px); }}
       to {{ opacity: 1; transform: translateY(0); }}
-    }}
-    @keyframes portrait-cycle {{
-      0%, 21.1% {{ opacity: 1; }}
-      30.3%, 90.8% {{ opacity: 0; }}
-      100% {{ opacity: 1; }}
     }}
     @keyframes pulse {{
       0%, 100% {{ opacity: .5; transform: scale(.8); }}
@@ -466,13 +513,12 @@ def render_svg(mode: str, points: list[tuple[int, int]], seed: int) -> str:
       50% {{ transform: translateY(-8px) rotate(2deg); }}
     }}
     @media (prefers-reduced-motion: reduce) {{
-      .portrait-dots, .portrait-cycle, .traveller-layer,
-      .live-dot, .cursor, .float-mark {{
+      .morph-layer, .live-dot, .cursor, .float-mark {{
         animation: none !important;
         opacity: 1 !important;
         transform: none !important;
       }}
-      .portrait-cycle, .traveller-layer {{ display: none !important; }}
+      .morph-layer {{ display: none !important; }}
       .reduced-portrait {{ display: inline !important; }}
     }}
   </style>
@@ -496,13 +542,10 @@ def render_svg(mode: str, points: list[tuple[int, int]], seed: int) -> str:
   </g>
   <clipPath id="portrait-clip"><rect x="58" y="104" width="362" height="354" rx="8"/></clipPath>
   <g clip-path="url(#portrait-clip)">
-    <g class="portrait-cycle">
-      {portrait_groups}
-    </g>
     <g class="reduced-portrait">
-      {reduced_portrait_groups}
+      {static_portrait}
     </g>
-    {travellers}
+    {morph}
   </g>
 
   {text(506, 124, "SYSTEM.INFO", "section")}
@@ -533,7 +576,10 @@ def main() -> None:
             display_path = output.relative_to(ROOT)
         except ValueError:
             display_path = output
-        print(f"{display_path}: {len(points):,} portrait dots")
+        print(
+            f"{display_path}: {MORPH_DOTS:,} morph dots "
+            f"from {len(points):,} portrait candidates"
+        )
 
 
 if __name__ == "__main__":
