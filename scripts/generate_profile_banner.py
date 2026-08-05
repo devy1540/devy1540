@@ -20,8 +20,9 @@ from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE = ROOT / "assets" / "profile-portrait.jpg"
 GRID_SIZE = 144
-MORPH_DOTS = 1000
+MORPH_DOTS = 1300
 MORPH_RADIUS = 1.35
+EMPHASIS_STROKE_WIDTH = 0.40
 PORTRAIT_SAMPLE_BLOCK = 8
 CODE_STROKE_WIDTH = 3
 CELL_SIZE = 2.45
@@ -389,6 +390,12 @@ def morph_circles(
         f'{theme["border"]};{theme["border"]};#326CE5;#326CE5;'
         f'{theme["portrait"]}'
     )
+    stroke_width_values = (
+        f"{EMPHASIS_STROKE_WIDTH:.2f};{EMPHASIS_STROKE_WIDTH:.2f};"
+        f"{EMPHASIS_STROKE_WIDTH:.2f};{EMPHASIS_STROKE_WIDTH:.2f};0;0;"
+        f"{EMPHASIS_STROKE_WIDTH:.2f};{EMPHASIS_STROKE_WIDTH:.2f};"
+        f"{EMPHASIS_STROKE_WIDTH:.2f}"
+    )
     circles = []
     for index in range(MORPH_DOTS):
         states = (
@@ -420,8 +427,18 @@ def morph_circles(
             "</circle>"
         )
     return (
-        f'<g class="morph-layer" fill="{theme["portrait"]}">'
+        f'<g class="morph-layer" fill="{theme["portrait"]}" '
+        f'stroke="{theme["portrait"]}" '
+        f'stroke-width="{EMPHASIS_STROKE_WIDTH:.2f}">'
         f'<animate attributeName="fill" values="{fill_values}" '
+        f'keyTimes="{key_times}" begin="{LOOP_BEGIN_SECONDS}s" '
+        f'dur="{LOOP_SECONDS}s" calcMode="spline" '
+        f'keySplines="{key_splines}" repeatCount="indefinite"/>'
+        f'<animate attributeName="stroke" values="{fill_values}" '
+        f'keyTimes="{key_times}" begin="{LOOP_BEGIN_SECONDS}s" '
+        f'dur="{LOOP_SECONDS}s" calcMode="spline" '
+        f'keySplines="{key_splines}" repeatCount="indefinite"/>'
+        f'<animate attributeName="stroke-width" values="{stroke_width_values}" '
         f'keyTimes="{key_times}" begin="{LOOP_BEGIN_SECONDS}s" '
         f'dur="{LOOP_SECONDS}s" calcMode="spline" '
         f'keySplines="{key_splines}" repeatCount="indefinite"/>'
@@ -487,8 +504,12 @@ def render_svg(mode: str, points: list[tuple[int, int]], seed: int) -> str:
     .morph-layer {{
       animation: dots-in .9s cubic-bezier(.2,.8,.2,1) both;
     }}
-    .reduced-portrait {{ display: none; }}
-    .reduced-portrait {{ fill: {theme["portrait"]}; }}
+    .reduced-portrait {{
+      display: none;
+      fill: {theme["portrait"]};
+      stroke: {theme["portrait"]};
+      stroke-width: {EMPHASIS_STROKE_WIDTH:.2f};
+    }}
     .live-dot {{
       fill: {theme["danger"]};
       transform-origin: 1102px 45px;
