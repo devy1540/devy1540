@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="360" viewBox="0 0 860 360" role="img" aria-labelledby="title desc">
+  <title id="title">Applied AI Engineer and Backend Engineer profile banner</title>
+  <desc id="desc">AI를 개발 전 과정에 적용하고 검증 가능한 제품으로 완성하는 AI-native 엔지니어의 프로필 배너</desc>
+
+  <defs>
+    <linearGradient id="accent-line" x1="48" y1="0" x2="812" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#60A5FA" stop-opacity="0.12"/>
+      <stop offset="0.5" stop-color="#60A5FA" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#60A5FA" stop-opacity="0.12"/>
+    </linearGradient>
+    <style>
+      text {
+        font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      }
+
+      .signal {
+        animation: travel 7s cubic-bezier(.4, 0, .2, 1) infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+
+      .status {
+        animation: breathe 3.4s ease-in-out infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+
+      @keyframes travel {
+        0%, 12% { opacity: 0; transform: translateX(0); }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        88%, 100% { opacity: 0; transform: translateX(752px); }
+      }
+
+      @keyframes breathe {
+        0%, 100% { opacity: .35; transform: scale(.82); }
+        50% { opacity: 1; transform: scale(1); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .signal, .status { animation: none; }
+        .signal { display: none; }
+      }
+    </style>
+  </defs>
+
+  <rect width="860" height="360" rx="18" fill="#0D1117"/>
+  <rect x="0.5" y="0.5" width="859" height="359" rx="17.5" fill="none" stroke="#30363D"/>
+
+  <g aria-hidden="true">
+    <path d="M690 50H812" stroke="#30363D"/>
+    <path d="M748 42V58M780 42V58M812 42V58" stroke="#484F58"/>
+    <circle class="status" cx="812" cy="50" r="4" fill="#60A5FA"/>
+  </g>
+
+  <text x="48" y="55" fill="#8B949E" font-size="12" font-weight="600" letter-spacing="2.2">AI-NATIVE ENGINEERING</text>
+
+  <text x="48" y="130" fill="#F0F6FC" font-size="38" font-weight="700" letter-spacing="-1.4">
+    Applied AI Engineer <tspan fill="#8B949E" font-weight="400">|</tspan> Backend Engineer
+  </text>
+
+  <text x="48" y="176" fill="#B1BAC4" font-size="19" font-weight="500" letter-spacing="-0.35">
+    AI를 개발 전 과정에 적용하고, 검증 가능한 제품으로 완성합니다.
+  </text>
+
+  <g aria-hidden="true">
+    <path d="M48 226H812" stroke="url(#accent-line)"/>
+    <circle class="signal" cx="54" cy="226" r="4" fill="#60A5FA"/>
+  </g>
+
+  <g>
+    <text x="48" y="265" fill="#60A5FA" font-size="12" font-weight="700" letter-spacing="1.5">01 / APPLY AI</text>
+    <text x="48" y="294" fill="#8B949E" font-size="13" font-weight="500">Context · Workflow · Automation</text>
+
+    <path d="M300 252V302" stroke="#30363D" aria-hidden="true"/>
+
+    <text x="324" y="265" fill="#F0F6FC" font-size="12" font-weight="700" letter-spacing="1.5">02 / BUILD SYSTEMS</text>
+    <text x="324" y="294" fill="#8B949E" font-size="13" font-weight="500">Backend · API · Infrastructure</text>
+
+    <path d="M576 252V302" stroke="#30363D" aria-hidden="true"/>
+
+    <text x="600" y="265" fill="#F0F6FC" font-size="12" font-weight="700" letter-spacing="1.5">03 / VERIFY RESULTS</text>
+    <text x="600" y="294" fill="#8B949E" font-size="13" font-weight="500">Tests · Logs · Metrics</text>
+  </g>
+
+  <text x="48" y="334" fill="#8B949E" font-size="10" font-weight="600" letter-spacing="1.7">AI-NATIVE · EVIDENCE-DRIVEN · PRODUCTION-READY</text>
+</svg>
