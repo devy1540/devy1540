@@ -1,87 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="360" viewBox="0 0 860 360" role="img" aria-labelledby="title desc">
-  <title id="title">Applied AI Engineer and Backend Engineer profile banner</title>
-  <desc id="desc">AI를 개발 전 과정에 적용하고 검증 가능한 제품으로 완성하는 AI-native 엔지니어의 프로필 배너</desc>
-
-  <defs>
-    <linearGradient id="accent-line" x1="48" y1="0" x2="812" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#2563EB" stop-opacity="0.14"/>
-      <stop offset="0.5" stop-color="#2563EB" stop-opacity="0.5"/>
-      <stop offset="1" stop-color="#2563EB" stop-opacity="0.14"/>
-    </linearGradient>
-    <style>
-      text {
-        font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-      }
-
-      .signal {
-        animation: travel 7s cubic-bezier(.4, 0, .2, 1) infinite;
-        transform-box: fill-box;
-        transform-origin: center;
-      }
-
-      .status {
-        animation: breathe 3.4s ease-in-out infinite;
-        transform-box: fill-box;
-        transform-origin: center;
-      }
-
-      @keyframes travel {
-        0%, 12% { opacity: 0; transform: translateX(0); }
-        20% { opacity: 1; }
-        80% { opacity: 1; }
-        88%, 100% { opacity: 0; transform: translateX(752px); }
-      }
-
-      @keyframes breathe {
-        0%, 100% { opacity: .35; transform: scale(.82); }
-        50% { opacity: 1; transform: scale(1); }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .signal, .status { animation: none; }
-        .signal { display: none; }
-      }
-    </style>
-  </defs>
-
-  <rect width="860" height="360" rx="18" fill="#FCFCFB"/>
-  <rect x="0.5" y="0.5" width="859" height="359" rx="17.5" fill="none" stroke="#E5E7EB"/>
-
-  <g aria-hidden="true">
-    <path d="M690 50H812" stroke="#E5E7EB"/>
-    <path d="M748 42V58M780 42V58M812 42V58" stroke="#D1D5DB"/>
-    <circle class="status" cx="812" cy="50" r="4" fill="#2563EB"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="400" viewBox="0 0 736 342" role="img" aria-labelledby="title desc">
+  <title id="title">Applied AI Engineer | Backend Engineer</title>
+  <desc id="desc">AI를 활용하고, 제품으로 완성합니다. 설계부터 구현·운영까지, 직접 만들고 검증합니다. AI, Backend, Infra의 신호가 Product로 모이는 연결도.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+    .muted { fill: #62626B; }
+    .wire { fill: none; stroke: #E3E3E8; stroke-width: 1.25; }
+    .node { fill: #FAFAFA; stroke: #E3E3E8; }
+    .signal { fill: #555560; opacity: 0; offset-rotate: 0deg; animation: travel 6s linear infinite; }
+    .ai { offset-path: path("M76 28 H89 Q103 28 103 42 V70 Q103 84 117 84 H145"); }
+    .backend { offset-path: path("M76 84 H145"); animation-delay: .35s; }
+    .infra { offset-path: path("M76 140 H89 Q103 140 103 126 V98 Q103 84 117 84 H145"); animation-delay: .7s; }
+    .receipt { fill: #555560; opacity: .3; animation: receive 6s ease-in-out infinite; }
+    @keyframes travel {
+      0% { offset-distance: 0%; opacity: 0; }
+      5%, 45% { opacity: .85; }
+      50%, 100% { offset-distance: 100%; opacity: 0; }
+    }
+    @keyframes receive {
+      0%, 48%, 83%, 100% { opacity: .3; }
+      64%, 70% { opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .signal { animation: none; display: none; }
+      .receipt { animation: none; opacity: .5; }
+    }
+  </style>
+  <rect x=".5" y=".5" width="735" height="341" rx="12" fill="#FFFFFF" stroke="#E3E3E8"/>
+  <text x="36" y="49" class="muted" font-size="12" font-weight="500">Applied AI Engineer <tspan fill="#E3E3E8"> | </tspan> Backend Engineer</text>
+  <g fill="#18181B" font-size="34" font-weight="750" letter-spacing="-1.5">
+    <text x="36" y="121">AI를 활용하고,</text>
+    <text x="36" y="167">제품으로 완성합니다.</text>
   </g>
-
-  <text x="48" y="55" fill="#6B7280" font-size="12" font-weight="600" letter-spacing="2.2">AI-NATIVE ENGINEERING</text>
-
-  <text x="48" y="130" fill="#111827" font-size="38" font-weight="700" letter-spacing="-1.4">
-    Applied AI Engineer <tspan fill="#6B7280" font-weight="400">|</tspan> Backend Engineer
-  </text>
-
-  <text x="48" y="176" fill="#4B5563" font-size="19" font-weight="500" letter-spacing="-0.35">
-    AI를 개발 전 과정에 적용하고, 검증 가능한 제품으로 완성합니다.
-  </text>
-
-  <g aria-hidden="true">
-    <path d="M48 226H812" stroke="url(#accent-line)"/>
-    <circle class="signal" cx="54" cy="226" r="4" fill="#2563EB"/>
+  <g class="muted" font-size="13">
+    <text x="36" y="213">설계부터 구현·운영까지,</text>
+    <text x="36" y="237">직접 만들고 검증합니다.</text>
   </g>
-
-  <g>
-    <text x="48" y="265" fill="#2563EB" font-size="12" font-weight="700" letter-spacing="1.5">01 / APPLY AI</text>
-    <text x="48" y="294" fill="#6B7280" font-size="13" font-weight="500">Context · Workflow · Automation</text>
-
-    <path d="M300 252V302" stroke="#E5E7EB" aria-hidden="true"/>
-
-    <text x="324" y="265" fill="#111827" font-size="12" font-weight="700" letter-spacing="1.5">02 / BUILD SYSTEMS</text>
-    <text x="324" y="294" fill="#6B7280" font-size="13" font-weight="500">Backend · API · Infrastructure</text>
-
-    <path d="M576 252V302" stroke="#E5E7EB" aria-hidden="true"/>
-
-    <text x="600" y="265" fill="#111827" font-size="12" font-weight="700" letter-spacing="1.5">03 / VERIFY RESULTS</text>
-    <text x="600" y="294" fill="#6B7280" font-size="13" font-weight="500">Tests · Logs · Metrics</text>
+  <g transform="translate(453 82)">
+    <path class="wire" d="M76 28H89Q103 28 103 42V70Q103 84 117 84H145M76 84H145M76 140H89Q103 140 103 126V98Q103 84 117 84"/>
+    <rect class="node" x=".5" y="9.5" width="75" height="37" rx="5"/>
+    <rect class="node" x=".5" y="65.5" width="75" height="37" rx="5"/>
+    <rect class="node" x=".5" y="121.5" width="75" height="37" rx="5"/>
+    <g class="muted" text-anchor="middle" font-size="12" font-weight="450">
+      <text x="38" y="32">AI</text>
+      <text x="38" y="88">Backend</text>
+      <text x="38" y="144">Infra</text>
+    </g>
+    <g aria-hidden="true">
+      <circle class="signal ai" r="2.6"/>
+      <circle class="signal backend" r="2.6"/>
+      <circle class="signal infra" r="2.6"/>
+    </g>
+    <rect x="145.5" y="47.5" width="100" height="73" rx="7" fill="#FFFFFF" stroke="#62626B"/>
+    <text x="195" y="77" text-anchor="middle" fill="#18181B" font-size="15" font-weight="600">Product</text>
+    <circle class="receipt" cx="160" cy="99" r="2.5" aria-hidden="true"/>
+    <text x="201" y="103" text-anchor="middle" class="muted" font-size="11">Build · Verify</text>
   </g>
-
-  <text x="48" y="334" fill="#4B5563" font-size="10" font-weight="600" letter-spacing="1.7">AI-NATIVE · EVIDENCE-DRIVEN · PRODUCTION-READY</text>
+  <path d="M36 282H700" stroke="#E3E3E8"/>
+  <text x="36" y="309" class="muted" font-size="11" font-weight="500" letter-spacing="1.1">BACKEND · AI · INFRASTRUCTURE</text>
+  <text x="700" y="309" text-anchor="end" class="muted" font-size="11" style="font-family: ui-monospace, SFMono-Regular, Consolas, monospace">dev.devy.dev</text>
 </svg>
