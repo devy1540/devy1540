@@ -33,7 +33,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Source: https://www.npmjs.com/package/@lobehub/icons-static-svg/v/1.95.0
 
-Icons: OpenAI, Gemini, Amazon Bedrock, Codex, Claude Code, AWS.
+Icons: OpenAI, Gemini, Codex, Claude Code, AWS.
 
 MIT License
 

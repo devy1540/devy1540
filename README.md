@@ -7,12 +7,14 @@
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/profile-tech-stack-mobile-dark.svg" />
-    <source media="(max-width: 600px)" srcset="./assets/profile-tech-stack-mobile-light.svg" />
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/profile-tech-stack-dark.svg" />
-    <img src="./assets/profile-tech-stack-light.svg" width="860" alt="Backend: Java, Spring Boot, PostgreSQL, MySQL, Redis. AI: Spring AI; OpenAI, Gemini, Amazon Bedrock; Codex, Claude Code. Infrastructure: Kubernetes, AWS, Google Cloud, Terraform, Grafana." />
-  </picture>
+  <a href="https://dev.devy.dev/about/" title="기술 스택과 관련 경험 보기">
+    <picture>
+      <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/profile-tech-stack-mobile-dark.svg" />
+      <source media="(max-width: 600px)" srcset="./assets/profile-tech-stack-mobile-light.svg" />
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/profile-tech-stack-dark.svg" />
+      <img src="./assets/profile-tech-stack-light.svg" width="860" alt="Backend: Java, Spring Boot, PostgreSQL, MySQL, Redis. AI: Spring AI; OpenAI, Gemini; Codex, Claude Code. Infrastructure: Kubernetes, AWS, Google Cloud, Terraform, Grafana." />
+    </picture>
+  </a>
 </p>
 
 <p align="center">

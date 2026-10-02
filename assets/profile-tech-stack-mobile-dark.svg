@@ -1,8 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="560" viewBox="0 0 360 560" role="img" aria-labelledby="title desc">
   <title id="title">Backend · AI · Infrastructure</title>
-  <desc id="desc">Backend: Java, Spring Boot, PostgreSQL, MySQL, Redis. AI: Spring AI; OpenAI, Gemini, Amazon Bedrock; Codex, Claude Code. Infrastructure: Kubernetes, AWS, Google Cloud, Terraform, Grafana.</desc>
+  <desc id="desc">Backend: Java, Spring Boot, PostgreSQL, MySQL, Redis. AI: Spring AI; OpenAI, Gemini; Codex, Claude Code. Infrastructure: Kubernetes, AWS, Google Cloud, Terraform, Grafana.</desc>
   <!--Icon licenses and source versions: THIRD_PARTY_NOTICES.md-->
-  <style>text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }</style>
+  <style>text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+    /* Six-second Backend → AI → Infrastructure emphasis cycle. */
+    .stack-panel { fill: #131A23; opacity: 0; animation: stack-panel 6s ease-in-out infinite; }
+    .stack-title { animation: stack-title 6s ease-in-out infinite; }
+    .stack-progress { fill: none; stroke: #A3ADB9; stroke-width: 1.25; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; opacity: 0; animation: stack-trace 6s linear infinite; }
+    .motion-backend { animation-delay: 0s; }
+    .motion-ai { animation-delay: 2s; }
+    .motion-infra { animation-delay: 4s; }
+    .stack-icon { animation: stack-reveal .55s ease-out both; }
+    @keyframes stack-panel {
+      0%, 33%, 100% { opacity: 0; }
+      4%, 27% { opacity: .95; }
+    }
+    @keyframes stack-title {
+      0%, 33%, 100% { fill: #A3ADB9; }
+      4%, 27% { fill: #EEF1F5; }
+    }
+    @keyframes stack-trace {
+      0% { opacity: 0; stroke-dashoffset: 1; }
+      4% { opacity: .7; stroke-dashoffset: 1; }
+      27% { opacity: .7; stroke-dashoffset: 0; }
+      33%, 100% { opacity: 0; stroke-dashoffset: 0; }
+    }
+    @keyframes stack-reveal { from { opacity: 0; } to { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) {
+      .stack-panel, .stack-progress { animation: none; opacity: 0; }
+      .stack-title { animation: none; fill: #A3ADB9; }
+      .stack-icon { animation: none; opacity: 1; }
+    }
+  </style>
   <defs>
     <mask id="mask-0" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14" style="mask-type:alpha">
       <svg x="0" y="0" width="14" height="14" viewBox="0 0 128 128">
@@ -62,12 +91,6 @@
         <path d="M20.616 10.835a14.147 14.147 0 01-4.45-3.001 14.111 14.111 0 01-3.678-6.452.503.503 0 00-.975 0 14.134 14.134 0 01-3.679 6.452 14.155 14.155 0 01-4.45 3.001c-.65.28-1.318.505-2.002.678a.502.502 0 000 .975c.684.172 1.35.397 2.002.677a14.147 14.147 0 014.45 3.001 14.112 14.112 0 013.679 6.453.502.502 0 00.975 0c.172-.685.397-1.351.677-2.003a14.145 14.145 0 013.001-4.45 14.113 14.113 0 016.453-3.678.503.503 0 000-.975 13.245 13.245 0 01-2.003-.678z" />
       </svg>
     </mask>
-    <mask id="mask-8" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14" style="mask-type:alpha">
-      <svg x="0" y="0" width="14" height="14" viewBox="0 0 24 24">
-        <title>Bedrock</title>
-        <path d="M13.05 15.513h3.08c.214 0 .389.177.389.394v1.82a1.704 1.704 0 011.296 1.661c0 .943-.755 1.708-1.685 1.708-.931 0-1.686-.765-1.686-1.708 0-.807.554-1.484 1.297-1.662v-1.425h-2.69v4.663a.395.395 0 01-.188.338l-2.69 1.641a.385.385 0 01-.405-.002l-4.926-3.086a.395.395 0 01-.185-.336V16.3L2.196 14.87A.395.395 0 012 14.555L2 14.528V9.406c0-.14.073-.27.192-.34l2.465-1.462V4.448c0-.129.062-.249.165-.322l.021-.014L9.77 1.058a.385.385 0 01.407 0l2.69 1.675a.395.395 0 01.185.336V7.6h3.856V5.683a1.704 1.704 0 01-1.296-1.662c0-.943.755-1.708 1.685-1.708.931 0 1.685.765 1.685 1.708 0 .807-.553 1.484-1.296 1.662v2.311a.391.391 0 01-.389.394h-4.245v1.806h6.624a1.69 1.69 0 011.64-1.313c.93 0 1.685.764 1.685 1.707 0 .943-.754 1.708-1.685 1.708a1.69 1.69 0 01-1.64-1.314H13.05v1.937h4.953l.915 1.18a1.66 1.66 0 01.84-.227c.931 0 1.685.764 1.685 1.707 0 .943-.754 1.708-1.685 1.708-.93 0-1.685-.765-1.685-1.708 0-.346.102-.668.276-.937l-.724-.935H13.05v1.806zM9.973 1.856L7.93 3.122V6.09h-.778V3.604L5.435 4.669v2.945l2.11 1.36L9.712 7.61V5.334h.778V7.83c0 .136-.07.263-.184.335L7.963 9.638v2.081l1.422 1.009-.446.646-1.406-.998-1.53 1.005-.423-.66 1.605-1.055v-1.99L5.038 8.29l-2.26 1.34v1.676l1.972-1.189.398.677-2.37 1.429V14.3l2.166 1.258 2.27-1.368.397.677-2.176 1.311V19.3l1.876 1.175 2.365-1.426.398.678-2.017 1.216 1.918 1.201 2.298-1.403v-5.78l-4.758 2.893-.4-.675 5.158-3.136V3.289L9.972 1.856zM16.13 18.47a.913.913 0 00-.908.92c0 .507.406.918.908.918a.913.913 0 00.907-.919.913.913 0 00-.907-.92zm3.63-3.81a.913.913 0 00-.908.92c0 .508.406.92.907.92a.913.913 0 00.908-.92.913.913 0 00-.908-.92zm1.555-4.99a.913.913 0 00-.908.92c0 .507.407.918.908.918a.913.913 0 00.907-.919.913.913 0 00-.907-.92zM17.296 3.1a.913.913 0 00-.907.92c0 .508.406.92.907.92a.913.913 0 00.908-.92.913.913 0 00-.908-.92z" />
-      </svg>
-    </mask>
     <mask id="mask-9" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14" style="mask-type:alpha">
       <svg x="0" y="0" width="14" height="14" viewBox="0 0 24 24">
         <title>Codex</title>
@@ -120,30 +143,38 @@
     </mask>
   </defs>
   <rect x="0.5" y="0.5" width="359" height="559" rx="12" fill="#0D1117" stroke="#323A45" />
+  <g aria-hidden="true">
+    <rect class="stack-panel motion-backend" x="13" y="16" width="334" height="134" rx="8"/>
+    <path class="stack-progress motion-backend" d="M25 52H335" pathLength="1"/>
+    <rect class="stack-panel motion-ai" x="13" y="184" width="334" height="200" rx="8"/>
+    <path class="stack-progress motion-ai" d="M25 210H335" pathLength="1"/>
+    <rect class="stack-panel motion-infra" x="13" y="418" width="334" height="126" rx="8"/>
+    <path class="stack-progress motion-infra" d="M25 444H335" pathLength="1"/>
+  </g>
   <path d="M25 162H335" fill="none" stroke="#323A45" />
   <path d="M25 396H335" fill="none" stroke="#323A45" />
-  <text x="25" y="42" font-size="13" font-weight="600" fill="#A3ADB9">Backend</text>
-  <g transform="translate(25 60)" aria-hidden="true">
+  <text x="25" y="42" font-size="13" font-weight="600" fill="#A3ADB9" class="stack-title motion-backend">Backend</text>
+  <g transform="translate(25 60)" aria-hidden="true" class="stack-icon" style="animation-delay: 0.000s">
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-0)" />
   </g>
   <text x="45" y="72" font-size="12" font-weight="500" fill="#E2E7EE">Java</text>
-  <g transform="translate(184 60)" aria-hidden="true">
+  <g transform="translate(184 60)" aria-hidden="true" class="stack-icon" style="animation-delay: 0.000s">
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-1)" />
   </g>
   <text x="204" y="72" font-size="12" font-weight="500" fill="#E2E7EE">Spring Boot</text>
-  <g transform="translate(25 92)" aria-hidden="true">
+  <g transform="translate(25 92)" aria-hidden="true" class="stack-icon" style="animation-delay: 0.045s">
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-2)" />
   </g>
   <text x="45" y="104" font-size="12" font-weight="500" fill="#E2E7EE">PostgreSQL</text>
-  <g transform="translate(184 92)" aria-hidden="true">
+  <g transform="translate(184 92)" aria-hidden="true" class="stack-icon" style="animation-delay: 0.045s">
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-3)" />
   </g>
   <text x="204" y="104" font-size="12" font-weight="500" fill="#E2E7EE">MySQL</text>
-  <g transform="translate(25 120)" aria-hidden="true">
+  <g transform="translate(25 120)" aria-hidden="true" class="stack-icon" style="animation-delay: 0.090s">
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-4)" />
   </g>
   <text x="45" y="132" font-size="12" font-weight="500" fill="#E2E7EE">Redis</text>
-  <text x="25" y="200" font-size="13" font-weight="600" fill="#A3ADB9">AI</text>
+  <text x="25" y="200" font-size="13" font-weight="600" fill="#A3ADB9" class="stack-title motion-ai">AI</text>
   <switch>
     <text x="25" y="237" font-size="11" font-weight="400" fill="#A3ADB9" systemLanguage="ko,ko-KR" lang="ko">프레임워크</text>
     <text x="25" y="237" font-size="11" font-weight="400" fill="#A3ADB9" systemLanguage="ja,ja-JP" lang="ja">フレームワーク</text>
@@ -152,7 +183,7 @@
     <text x="25" y="237" font-size="11" font-weight="400" fill="#A3ADB9" systemLanguage="fr,fr-FR,fr-CA,fr-BE,fr-CH" lang="fr">Framework</text>
     <text x="25" y="237" font-size="11" font-weight="400" fill="#A3ADB9" lang="en">Framework</text>
   </switch>
-  <g transform="translate(25 249)" aria-hidden="true">
+  <g transform="translate(25 249)" aria-hidden="true" class="stack-icon" style="animation-delay: 0.120s">
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-5)" />
   </g>
   <text x="45" y="261" font-size="12" font-weight="500" fill="#E2E7EE">Spring AI</text>
@@ -164,18 +195,14 @@
     <text x="25" y="292" font-size="11" font-weight="400" fill="#A3ADB9" systemLanguage="fr,fr-FR,fr-CA,fr-BE,fr-CH" lang="fr">Modèles et plateformes</text>
     <text x="25" y="292" font-size="11" font-weight="400" fill="#A3ADB9" lang="en">Models &amp; Platforms</text>
   </switch>
-  <g transform="translate(25 304)" aria-hidden="true">
+  <g transform="translate(25 304)" aria-hidden="true" class="stack-icon" style="animation-delay: 0.165s">
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-6)" />
   </g>
   <text x="45" y="316" font-size="12" font-weight="500" fill="#E2E7EE">OpenAI</text>
-  <g transform="translate(103 304)" aria-hidden="true">
+  <g transform="translate(103 304)" aria-hidden="true" class="stack-icon" style="animation-delay: 0.165s">
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-7)" />
   </g>
   <text x="123" y="316" font-size="12" font-weight="500" fill="#E2E7EE">Gemini</text>
-  <g transform="translate(180 304)" aria-hidden="true">
-    <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-8)" />
-  </g>
-  <text x="200" y="316" font-size="12" font-weight="500" fill="#E2E7EE">Amazon Bedrock</text>
   <switch>
     <text x="25" y="347" font-size="11" font-weight="400" fill="#A3ADB9" systemLanguage="ko,ko-KR" lang="ko">개발 도구</text>
     <text x="25" y="347" font-size="11" font-weight="400" fill="#A3ADB9" systemLanguage="ja,ja-JP" lang="ja">開発ツール</text>
@@ -184,32 +211,32 @@
     <text x="25" y="347" font-size="11" font-weight="400" fill="#A3ADB9" systemLanguage="fr,fr-FR,fr-CA,fr-BE,fr-CH" lang="fr">Outils de développement</text>
     <text x="25" y="347" font-size="11" font-weight="400" fill="#A3ADB9" lang="en">Developer Tools</text>
   </switch>
-  <g transform="translate(25 359)" aria-hidden="true">
+  <g transform="translate(25 359)" aria-hidden="true" class="stack-icon" style="animation-delay: 0.210s">
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-9)" />
   </g>
   <text x="45" y="371" font-size="12" font-weight="500" fill="#E2E7EE">Codex</text>
-  <g transform="translate(96 359)" aria-hidden="true">
+  <g transform="translate(96 359)" aria-hidden="true" class="stack-icon" style="animation-delay: 0.210s">
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-10)" />
   </g>
   <text x="116" y="371" font-size="12" font-weight="500" fill="#E2E7EE">Claude Code</text>
-  <text x="25" y="434" font-size="13" font-weight="600" fill="#A3ADB9">Infrastructure</text>
-  <g transform="translate(25 456)" aria-hidden="true">
+  <text x="25" y="434" font-size="13" font-weight="600" fill="#A3ADB9" class="stack-title motion-infra">Infrastructure</text>
+  <g transform="translate(25 456)" aria-hidden="true" class="stack-icon" style="animation-delay: 0.240s">
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-11)" />
   </g>
   <text x="45" y="468" font-size="12" font-weight="500" fill="#E2E7EE">Kubernetes</text>
-  <g transform="translate(184 456)" aria-hidden="true">
+  <g transform="translate(184 456)" aria-hidden="true" class="stack-icon" style="animation-delay: 0.240s">
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-12)" />
   </g>
   <text x="204" y="468" font-size="12" font-weight="500" fill="#E2E7EE">AWS</text>
-  <g transform="translate(25 484)" aria-hidden="true">
+  <g transform="translate(25 484)" aria-hidden="true" class="stack-icon" style="animation-delay: 0.285s">
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-13)" />
   </g>
   <text x="45" y="496" font-size="12" font-weight="500" fill="#E2E7EE">Google Cloud</text>
-  <g transform="translate(25 516)" aria-hidden="true">
+  <g transform="translate(25 516)" aria-hidden="true" class="stack-icon" style="animation-delay: 0.330s">
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-14)" />
   </g>
   <text x="45" y="528" font-size="12" font-weight="500" fill="#E2E7EE">Terraform</text>
-  <g transform="translate(184 516)" aria-hidden="true">
+  <g transform="translate(184 516)" aria-hidden="true" class="stack-icon" style="animation-delay: 0.330s">
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-15)" />
   </g>
   <text x="204" y="528" font-size="12" font-weight="500" fill="#E2E7EE">Grafana</text>
