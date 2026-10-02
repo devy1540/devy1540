@@ -165,12 +165,18 @@
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-15)" />
   </g>
   <text x="560" y="211" font-size="12" font-weight="500" fill="#E2E7EE">Grafana</text>
-  <text x="201" y="77" font-size="11" font-weight="400" fill="#A3ADB9">프레임워크</text>
+  <switch>
+    <text x="201" y="77" font-size="11" font-weight="400" fill="#A3ADB9" systemLanguage="ko,ko-KR" lang="ko">프레임워크</text>
+    <text x="201" y="77" font-size="11" font-weight="400" fill="#A3ADB9" lang="en">Framework</text>
+  </switch>
   <g transform="translate(201 89)" aria-hidden="true">
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-5)" />
   </g>
   <text x="221" y="101" font-size="12" font-weight="500" fill="#E2E7EE">Spring AI</text>
-  <text x="201" y="133" font-size="11" font-weight="400" fill="#A3ADB9">모델·플랫폼</text>
+  <switch>
+    <text x="201" y="133" font-size="11" font-weight="400" fill="#A3ADB9" systemLanguage="ko,ko-KR" lang="ko">모델·플랫폼</text>
+    <text x="201" y="133" font-size="11" font-weight="400" fill="#A3ADB9" lang="en">Models &amp; Platforms</text>
+  </switch>
   <g transform="translate(201 145)" aria-hidden="true">
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-6)" />
   </g>
@@ -183,7 +189,10 @@
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-8)" />
   </g>
   <text x="376" y="157" font-size="12" font-weight="500" fill="#E2E7EE">Amazon Bedrock</text>
-  <text x="201" y="188" font-size="11" font-weight="400" fill="#A3ADB9">개발 도구</text>
+  <switch>
+    <text x="201" y="188" font-size="11" font-weight="400" fill="#A3ADB9" systemLanguage="ko,ko-KR" lang="ko">개발 도구</text>
+    <text x="201" y="188" font-size="11" font-weight="400" fill="#A3ADB9" lang="en">Developer Tools</text>
+  </switch>
   <g transform="translate(201 200)" aria-hidden="true">
     <rect width="14" height="14" fill="#E2E7EE" mask="url(#mask-9)" />
   </g>

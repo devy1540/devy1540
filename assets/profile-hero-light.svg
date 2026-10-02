@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="860" height="400" viewBox="0 0 736 342" role="img" aria-labelledby="title desc">
   <title id="title">Applied AI Engineer | Backend Engineer</title>
-  <desc id="desc">AI를 활용하고, 제품으로 완성합니다. 설계부터 구현·운영까지, 직접 만들고 검증합니다. AI, Backend, Infra의 신호가 Product로 모이는 연결도.</desc>
+  <desc id="desc">AI를 활용하고, 제품으로 완성합니다. 설계부터 구현·운영까지, 직접 만들고 검증합니다. / I build with AI, and ship products. From design to implementation and operations, I build and verify it myself. AI, Backend, and Infra connect to Product.</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
     .muted { fill: #62626B; }
@@ -27,14 +27,28 @@
   </style>
   <rect x=".5" y=".5" width="735" height="341" rx="12" fill="#FFFFFF" stroke="#E3E3E8"/>
   <text x="36" y="49" class="muted" font-size="12" font-weight="500">Applied AI Engineer <tspan fill="#E3E3E8"> | </tspan> Backend Engineer</text>
-  <g fill="#18181B" font-size="34" font-weight="750" letter-spacing="-1.5">
-    <text x="36" y="121">AI를 활용하고,</text>
-    <text x="36" y="167">제품으로 완성합니다.</text>
-  </g>
-  <g class="muted" font-size="13">
-    <text x="36" y="213">설계부터 구현·운영까지,</text>
-    <text x="36" y="237">직접 만들고 검증합니다.</text>
-  </g>
+  <switch>
+    <g systemLanguage="ko,ko-KR" lang="ko">
+      <g fill="#18181B" font-size="34" font-weight="750" letter-spacing="-1.5">
+        <text x="36" y="121">AI를 활용하고,</text>
+        <text x="36" y="167">제품으로 완성합니다.</text>
+      </g>
+      <g class="muted" font-size="13">
+        <text x="36" y="213">설계부터 구현·운영까지,</text>
+        <text x="36" y="237">직접 만들고 검증합니다.</text>
+      </g>
+    </g>
+    <g lang="en">
+      <g fill="#18181B" font-size="34" font-weight="750" letter-spacing="-1">
+        <text x="36" y="121">I build with AI,</text>
+        <text x="36" y="167">and ship products.</text>
+      </g>
+      <g class="muted" font-size="13">
+        <text x="36" y="213">From design to implementation and operations,</text>
+        <text x="36" y="237">I build and verify it myself.</text>
+      </g>
+    </g>
+  </switch>
   <g transform="translate(453 82)">
     <path class="wire" d="M76 28H89Q103 28 103 42V70Q103 84 117 84H145M76 84H145M76 140H89Q103 140 103 126V98Q103 84 117 84"/>
     <rect class="node" x=".5" y="9.5" width="75" height="37" rx="5"/>
