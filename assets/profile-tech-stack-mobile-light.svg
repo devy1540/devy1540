@@ -2,13 +2,7 @@
   <title id="title">Backend · AI · Infrastructure</title>
   <desc id="desc">Backend: Java, Spring Boot, PostgreSQL, MySQL, Redis. AI: Spring AI; OpenAI, Gemini, Amazon Bedrock; Codex, Claude Code. Infrastructure: Kubernetes, AWS, Google Cloud, Terraform, Grafana.</desc>
   <!--Icon licenses and source versions: THIRD_PARTY_NOTICES.md-->
-  <style>text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
-    /* Locale overrides: start */
-    .locale-override { display: none; }
-    .locale-override:target { display: inline; }
-    .locale-override:target ~ switch { display: none; }
-    /* Locale overrides: end */
-  </style>
+  <style>text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }</style>
   <defs>
     <mask id="mask-0" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14" style="mask-type:alpha">
       <svg x="0" y="0" width="14" height="14" viewBox="0 0 128 128">
@@ -150,38 +144,6 @@
   </g>
   <text x="45" y="132" font-size="12" font-weight="500" fill="#27272C">Redis</text>
   <text x="25" y="200" font-size="13" font-weight="600" fill="#62626B">AI</text>
-  <!-- Locale overrides: start -->
-  <g xmlns="http://www.w3.org/2000/svg" id="locale-en" class="locale-override" lang="en">
-    <text x="25" y="237" font-size="11" font-weight="400" fill="#62626B" lang="en">Framework</text>
-    <text x="25" y="292" font-size="11" font-weight="400" fill="#62626B" lang="en">Models &amp; Platforms</text>
-    <text x="25" y="347" font-size="11" font-weight="400" fill="#62626B" lang="en">Developer Tools</text>
-  </g>
-  <g xmlns="http://www.w3.org/2000/svg" id="locale-ko" class="locale-override" lang="ko">
-    <text x="25" y="237" font-size="11" font-weight="400" fill="#62626B" lang="ko">프레임워크</text>
-    <text x="25" y="292" font-size="11" font-weight="400" fill="#62626B" lang="ko">모델·플랫폼</text>
-    <text x="25" y="347" font-size="11" font-weight="400" fill="#62626B" lang="ko">개발 도구</text>
-  </g>
-  <g xmlns="http://www.w3.org/2000/svg" id="locale-ja" class="locale-override" lang="ja">
-    <text x="25" y="237" font-size="11" font-weight="400" fill="#62626B" lang="ja">フレームワーク</text>
-    <text x="25" y="292" font-size="11" font-weight="400" fill="#62626B" lang="ja">モデル・プラットフォーム</text>
-    <text x="25" y="347" font-size="11" font-weight="400" fill="#62626B" lang="ja">開発ツール</text>
-  </g>
-  <g xmlns="http://www.w3.org/2000/svg" id="locale-zh-CN" class="locale-override" lang="zh-Hans">
-    <text x="25" y="237" font-size="11" font-weight="400" fill="#62626B" lang="zh-Hans">框架</text>
-    <text x="25" y="292" font-size="11" font-weight="400" fill="#62626B" lang="zh-Hans">模型与平台</text>
-    <text x="25" y="347" font-size="11" font-weight="400" fill="#62626B" lang="zh-Hans">开发工具</text>
-  </g>
-  <g xmlns="http://www.w3.org/2000/svg" id="locale-es" class="locale-override" lang="es">
-    <text x="25" y="237" font-size="11" font-weight="400" fill="#62626B" lang="es">Framework</text>
-    <text x="25" y="292" font-size="11" font-weight="400" fill="#62626B" lang="es">Modelos y plataformas</text>
-    <text x="25" y="347" font-size="11" font-weight="400" fill="#62626B" lang="es">Herramientas de desarrollo</text>
-  </g>
-  <g xmlns="http://www.w3.org/2000/svg" id="locale-fr" class="locale-override" lang="fr">
-    <text x="25" y="237" font-size="11" font-weight="400" fill="#62626B" lang="fr">Framework</text>
-    <text x="25" y="292" font-size="11" font-weight="400" fill="#62626B" lang="fr">Modèles et plateformes</text>
-    <text x="25" y="347" font-size="11" font-weight="400" fill="#62626B" lang="fr">Outils de développement</text>
-  </g>
-  <!-- Locale overrides: end -->
   <switch>
     <text x="25" y="237" font-size="11" font-weight="400" fill="#62626B" systemLanguage="ko,ko-KR" lang="ko">프레임워크</text>
     <text x="25" y="237" font-size="11" font-weight="400" fill="#62626B" systemLanguage="ja,ja-JP" lang="ja">フレームワーク</text>
