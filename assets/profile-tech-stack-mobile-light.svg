@@ -146,6 +146,10 @@
   <text x="25" y="200" font-size="13" font-weight="600" fill="#62626B">AI</text>
   <switch>
     <text x="25" y="237" font-size="11" font-weight="400" fill="#62626B" systemLanguage="ko,ko-KR" lang="ko">프레임워크</text>
+    <text x="25" y="237" font-size="11" font-weight="400" fill="#62626B" systemLanguage="ja,ja-JP" lang="ja">フレームワーク</text>
+    <text x="25" y="237" font-size="11" font-weight="400" fill="#62626B" systemLanguage="zh,zh-CN,zh-SG,zh-Hans,zh-Hans-CN,zh-Hans-SG" lang="zh-Hans">框架</text>
+    <text x="25" y="237" font-size="11" font-weight="400" fill="#62626B" systemLanguage="es,es-ES,es-419,es-MX,es-US,es-AR,es-CO,es-CL,es-PE" lang="es">Framework</text>
+    <text x="25" y="237" font-size="11" font-weight="400" fill="#62626B" systemLanguage="fr,fr-FR,fr-CA,fr-BE,fr-CH" lang="fr">Framework</text>
     <text x="25" y="237" font-size="11" font-weight="400" fill="#62626B" lang="en">Framework</text>
   </switch>
   <g transform="translate(25 249)" aria-hidden="true">
@@ -154,6 +158,10 @@
   <text x="45" y="261" font-size="12" font-weight="500" fill="#27272C">Spring AI</text>
   <switch>
     <text x="25" y="292" font-size="11" font-weight="400" fill="#62626B" systemLanguage="ko,ko-KR" lang="ko">모델·플랫폼</text>
+    <text x="25" y="292" font-size="11" font-weight="400" fill="#62626B" systemLanguage="ja,ja-JP" lang="ja">モデル・プラットフォーム</text>
+    <text x="25" y="292" font-size="11" font-weight="400" fill="#62626B" systemLanguage="zh,zh-CN,zh-SG,zh-Hans,zh-Hans-CN,zh-Hans-SG" lang="zh-Hans">模型与平台</text>
+    <text x="25" y="292" font-size="11" font-weight="400" fill="#62626B" systemLanguage="es,es-ES,es-419,es-MX,es-US,es-AR,es-CO,es-CL,es-PE" lang="es">Modelos y plataformas</text>
+    <text x="25" y="292" font-size="11" font-weight="400" fill="#62626B" systemLanguage="fr,fr-FR,fr-CA,fr-BE,fr-CH" lang="fr">Modèles et plateformes</text>
     <text x="25" y="292" font-size="11" font-weight="400" fill="#62626B" lang="en">Models &amp; Platforms</text>
   </switch>
   <g transform="translate(25 304)" aria-hidden="true">
@@ -170,6 +178,10 @@
   <text x="200" y="316" font-size="12" font-weight="500" fill="#27272C">Amazon Bedrock</text>
   <switch>
     <text x="25" y="347" font-size="11" font-weight="400" fill="#62626B" systemLanguage="ko,ko-KR" lang="ko">개발 도구</text>
+    <text x="25" y="347" font-size="11" font-weight="400" fill="#62626B" systemLanguage="ja,ja-JP" lang="ja">開発ツール</text>
+    <text x="25" y="347" font-size="11" font-weight="400" fill="#62626B" systemLanguage="zh,zh-CN,zh-SG,zh-Hans,zh-Hans-CN,zh-Hans-SG" lang="zh-Hans">开发工具</text>
+    <text x="25" y="347" font-size="11" font-weight="400" fill="#62626B" systemLanguage="es,es-ES,es-419,es-MX,es-US,es-AR,es-CO,es-CL,es-PE" lang="es">Herramientas de desarrollo</text>
+    <text x="25" y="347" font-size="11" font-weight="400" fill="#62626B" systemLanguage="fr,fr-FR,fr-CA,fr-BE,fr-CH" lang="fr">Outils de développement</text>
     <text x="25" y="347" font-size="11" font-weight="400" fill="#62626B" lang="en">Developer Tools</text>
   </switch>
   <g transform="translate(25 359)" aria-hidden="true">
