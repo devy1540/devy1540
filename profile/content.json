@@ -1,0 +1,455 @@
+{
+  "shared": {
+    "locale_names": {
+      "en": "English",
+      "ko": "한국어",
+      "ja": "日本語",
+      "zh-CN": "简体中文",
+      "es": "Español",
+      "fr": "Français"
+    },
+    "readme_files": {
+      "en": "README.en.md",
+      "ko": "README.ko.md",
+      "ja": "README.ja.md",
+      "zh-CN": "README.zh-CN.md",
+      "es": "README.es.md",
+      "fr": "README.fr.md"
+    },
+    "experience_links": [
+      [
+        {
+          "key": "diagnostics",
+          "url": "https://dev.devy.dev/about/projects/ai-diagnostic-pipeline/"
+        },
+        {
+          "key": "support",
+          "url": "https://dev.devy.dev/about/projects/cs-automation/"
+        }
+      ],
+      [
+        {
+          "key": "payments",
+          "url": "https://dev.devy.dev/about/projects/payment-system/"
+        },
+        {
+          "key": "auth",
+          "url": "https://dev.devy.dev/about/projects/auth-refactoring/"
+        },
+        {
+          "key": "notifications",
+          "url": "https://dev.devy.dev/about/projects/notification-server/"
+        }
+      ],
+      [
+        {
+          "key": "infra",
+          "url": "https://dev.devy.dev/about/projects/infra-modernization/"
+        }
+      ]
+    ],
+    "projects": [
+      {
+        "name": "FCP",
+        "url": "https://github.com/devy1540/fcp"
+      },
+      {
+        "name": "toard",
+        "url": "https://github.com/devy1540/toard"
+      },
+      {
+        "name": "Codex Collaboration Conductor",
+        "url": "https://github.com/devy1540/codex-collab-conductor"
+      },
+      {
+        "name": "LLM Wiki",
+        "url": "https://github.com/devy1540/ltm-wiki"
+      },
+      {
+        "name": "JVM Concurrency Benchmark",
+        "url": "https://github.com/devy1540/jvm-concurrency-benchmark"
+      }
+    ],
+    "current_focus_url": "https://dev.devy.dev/about/projects/ai-agent-workflow/",
+    "writing_urls": [
+      "https://dev.devy.dev/posts/odin-ax-transformation/",
+      "https://dev.devy.dev/posts/spring-ai-pipeline-real-world/",
+      "https://dev.devy.dev/posts/jwt-hs256-to-rs256-jwks-kms/",
+      "https://dev.devy.dev/posts/lgtm-stack-observability/"
+    ],
+    "contact": {
+      "portfolio": "https://dev.devy.dev/about/",
+      "blog": "https://dev.devy.dev/",
+      "email": "gurwns1540@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/%ED%98%81%EC%A4%80-%EC%9C%A4-21a3bb22a/"
+    }
+  },
+  "locales": {
+    "en": {
+      "headings": [
+        "About",
+        "Selected work",
+        "Open-source projects",
+        "Currently building",
+        "How I work",
+        "Writing",
+        "Find me"
+      ],
+      "experience_names": [
+        "AI products",
+        "Backend systems",
+        "Infrastructure & observability"
+      ],
+      "link_names": {
+        "diagnostics": "Diagnostic pipeline",
+        "support": "CS assistance",
+        "payments": "Payments",
+        "auth": "Authentication",
+        "notifications": "Notifications",
+        "infra": "Infrastructure project"
+      },
+      "focus_link": "Agent workflow project",
+      "writing_note": "I write engineering notes in Korean, with implementation choices, operating constraints, and what I verified.",
+      "contact_names": [
+        "Portfolio",
+        "Blog",
+        "Email",
+        "LinkedIn"
+      ],
+      "about": [
+        "I’m a backend engineer at Day1Company, based in Seoul.",
+        "I build AI features and development workflows on a foundation of backend systems: payments, authentication, and service infrastructure.",
+        "Previously at EXEM, I worked on monitoring services and Kafka/Druid data collection pipelines."
+      ],
+      "experience": [
+        "Built diagnostic and feedback pipelines and CS answer assistance with Spring AI. Diagnostic generation dropped from 6–7 minutes to 1–2 minutes, with roughly 50% lower LLM costs.",
+        "Redesigned payment modules and authentication, and built multi-channel notifications. My work includes PortOne and RS256/JWKS signing with GCP KMS.",
+        "Built ECS→EKS and AWS→GCP/GKE migrations, ArgoCD GitOps delivery, and observability with OpenTelemetry and the LGTM stack."
+      ],
+      "projects": [
+        "A Go cloud emulator for local development and integration tests with official AWS/GCP SDKs. It documents API support boundaries and provides a structured CLI and snapshots.",
+        "A self-hosted dashboard for AI coding-tool usage, estimated costs, and activity across Claude Code, Codex, Cursor, and other tools.",
+        "A Codex plugin for task-scoped native subagent delegation and evidence-based PR review.",
+        "A Codex plugin that turns selected sources into linked, source-backed Markdown knowledge, with project Wikis managed in Obsidian. Currently an MVP.",
+        "A reproducible comparison of Platform Threads, Virtual Threads, and Kotlin Coroutines across I/O, CPU, and concurrency scenarios, with Prometheus and Grafana metrics."
+      ],
+      "current_focus": "I’m improving agent collaboration that connects Slack requests to development, review, verification, and deployment. E2E agents for PR-specific checks and audit agents for execution records are in development.",
+      "working_style": [
+        "Connect backend design and implementation to the screens, tests, delivery, and observability a feature needs.",
+        "Define agent responsibilities and human decision points, and connect requests, issues, PRs, and deployment records.",
+        "Verify completion with code, tests, and execution evidence, then check behavior after deployment."
+      ],
+      "writing": [
+        "Applying agents to reduce team workflow bottlenecks",
+        "A seven-stage diagnostic pipeline with Spring AI",
+        "JWT signing: HS256 → RS256/JWKS/KMS",
+        "Moving from Datadog to the LGTM stack"
+      ]
+    },
+    "ko": {
+      "headings": [
+        "소개",
+        "주요 경험",
+        "오픈소스 프로젝트",
+        "현재 만드는 것",
+        "개발·운영 방식",
+        "개발 기록",
+        "연락처"
+      ],
+      "experience_names": [
+        "AI 제품",
+        "백엔드",
+        "인프라·관측"
+      ],
+      "link_names": {
+        "diagnostics": "진단 파이프라인",
+        "support": "CS 상담 보조",
+        "payments": "결제",
+        "auth": "인증",
+        "notifications": "알림",
+        "infra": "인프라 프로젝트"
+      },
+      "focus_link": "에이전트 업무 흐름 상세",
+      "writing_note": "구현 과정에서 선택한 방법, 운영 제약과 검증한 결과를 한국어로 기록합니다.",
+      "contact_names": [
+        "포트폴리오",
+        "블로그",
+        "이메일",
+        "LinkedIn"
+      ],
+      "about": [
+        "안녕하세요, 윤혁준입니다. 서울에서 데이원컴퍼니의 백엔드 엔지니어로 일하고 있습니다.",
+        "결제·인증과 서비스 인프라를 설계·운영해 온 경험을 바탕으로, AI를 제품 기능과 팀의 개발·운영 흐름에 연결합니다.",
+        "이전에는 엑셈에서 모니터링 서비스와 Kafka·Druid 기반 데이터 수집 파이프라인을 개발했습니다."
+      ],
+      "experience": [
+        "Spring AI 기반 진단·피드백 파이프라인과 CS 상담 보조 기능을 구축했습니다. 진단 생성 시간은 6–7분에서 1–2분으로 줄였고, LLM 비용은 약 50% 절감했습니다.",
+        "결제 모듈과 인증 구조를 재설계하고, 멀티채널 알림 서버를 구축했습니다. PortOne, RS256/JWKS·GCP KMS, 메시징과 데이터 저장소를 서비스 운영에 연결합니다.",
+        "ECS→EKS와 AWS→GCP/GKE 이관, ArgoCD 기반 GitOps, OpenTelemetry·LGTM 관측 환경을 구축했습니다."
+      ],
+      "projects": [
+        "공식 AWS·GCP SDK를 연결해 로컬 개발과 통합 테스트에 사용하는 Go 클라우드 에뮬레이터. API별 지원 범위, 구조화된 CLI와 스냅샷을 제공합니다.",
+        "AI 코딩 도구의 사용량·예상 비용·활동을 모아 보는 셀프호스팅 대시보드. Claude Code, Codex, Cursor 등 여러 도구의 기록을 연결합니다.",
+        "작업 범위에 맞춘 네이티브 하위 에이전트 분담과 근거 중심 PR 리뷰를 정의하는 Codex 플러그인.",
+        "선택한 자료를 출처가 있는 Markdown 지식으로 정리하는 Codex 플러그인. 프로젝트별 Wiki를 Obsidian에서 관리합니다. 현재 MVP 단계입니다.",
+        "Platform Thread·Virtual Thread·Kotlin Coroutine을 I/O, CPU, 동시성 시나리오로 비교하는 재현 가능한 벤치마크. Prometheus와 Grafana로 실행 지표를 확인합니다."
+      ],
+      "current_focus": "Slack 요청을 개발·리뷰·검증·배포로 연결하는 에이전트 협업 흐름을 개선하고 있습니다. PR별 검증을 위한 E2E 에이전트와 실행 기록을 점검하는 감사 에이전트는 개발 중입니다.",
+      "working_style": [
+        "백엔드 설계·구현에서 필요한 화면, 테스트, 배포·관측까지 연결합니다.",
+        "에이전트의 담당 범위와 사람이 판단할 조건을 정하고 요청·이슈·PR·배포 기록을 연결합니다.",
+        "완료 여부는 코드·테스트·실행 근거로 확인하고, 운영 반영 뒤 동작을 다시 확인합니다."
+      ],
+      "writing": [
+        "팀의 업무 병목을 줄이기 위한 AX 전환",
+        "Spring AI 실전 적용기 — 7단계 AI 진단 파이프라인",
+        "JWT 서명 전환 — HS256에서 RS256/JWKS/KMS로",
+        "Datadog 걷어내고 LGTM 스택 구축하기"
+      ]
+    },
+    "ja": {
+      "headings": [
+        "自己紹介",
+        "主な取り組み",
+        "オープンソースプロジェクト",
+        "現在の開発",
+        "開発・運用の進め方",
+        "技術記事",
+        "連絡先"
+      ],
+      "experience_names": [
+        "AIプロダクト",
+        "バックエンド",
+        "インフラ・監視"
+      ],
+      "link_names": {
+        "diagnostics": "診断パイプライン",
+        "support": "CS回答支援",
+        "payments": "決済",
+        "auth": "認証",
+        "notifications": "通知",
+        "infra": "インフラプロジェクト"
+      },
+      "focus_link": "エージェント業務フローの詳細",
+      "writing_note": "実装時の選択、運用上の制約、検証結果を韓国語で記録しています。",
+      "contact_names": [
+        "ポートフォリオ",
+        "ブログ",
+        "メール",
+        "LinkedIn"
+      ],
+      "about": [
+        "ソウルを拠点に、Day1Companyでバックエンドエンジニアとして働いています。",
+        "決済・認証・サービス基盤の設計と運用の経験を生かし、AIをプロダクトの機能とチームの開発・運用フローに組み込んでいます。",
+        "以前はEXEMで、監視サービスとKafka・Druidによるデータ収集パイプラインを開発していました。"
+      ],
+      "experience": [
+        "Spring AIで診断・フィードバックパイプラインとカスタマーサポートの回答支援を構築しました。診断生成を6〜7分から1〜2分に短縮し、LLMコストを約50%削減しました。",
+        "決済モジュールと認証を再設計し、マルチチャネル通知を構築しました。PortOneや、GCP KMSによるRS256/JWKS署名を扱っています。",
+        "ECS→EKSとAWS→GCP/GKEの移行、ArgoCDによるGitOps、OpenTelemetryとLGTMスタックによる監視基盤を構築しました。"
+      ],
+      "projects": [
+        "公式AWS・GCP SDKを接続して、ローカル開発と結合テストに使うGo製クラウドエミュレーター。APIごとの対応範囲、構造化CLI、スナップショットを提供します。",
+        "Claude Code、Codex、CursorなどのAIコーディングツールの使用量・推定コスト・アクティビティをまとめて確認するセルフホスト型ダッシュボード。",
+        "タスクの範囲に応じたネイティブサブエージェントへの分担と、根拠に基づくPRレビューを定義するCodexプラグイン。",
+        "選択した資料を、出典とリンクのあるMarkdown知識にまとめるCodexプラグイン。プロジェクトごとのWikiをObsidianで管理します。現在はMVP段階です。",
+        "Platform Thread、Virtual Thread、Kotlin CoroutineをI/O・CPU・高並行性のシナリオで比較する再現可能なベンチマーク。PrometheusとGrafanaで実行メトリクスを確認できます。"
+      ],
+      "current_focus": "Slackの依頼を開発・レビュー・検証・デプロイにつなぐエージェント協業フローを改善しています。PRごとの検証を行うE2Eエージェントと、実行記録を点検する監査エージェントは開発中です。",
+      "working_style": [
+        "バックエンドの設計・実装を、必要な画面、テスト、デプロイ、監視までつなぎます。",
+        "エージェントの担当範囲と人が判断する条件を定め、依頼・Issue・PR・デプロイの記録をつなぎます。",
+        "コード、テスト、実行の根拠で完了を確認し、運用反映後の動作も確かめます。"
+      ],
+      "writing": [
+        "チームの業務ボトルネックを減らすためのAIエージェント活用",
+        "Spring AIによる7段階の診断パイプライン",
+        "JWT署名の移行 — HS256からRS256/JWKS/KMSへ",
+        "DatadogからLGTMスタックへの移行"
+      ]
+    },
+    "zh-CN": {
+      "headings": [
+        "关于我",
+        "主要工作",
+        "开源项目",
+        "当前开发",
+        "开发与运维方式",
+        "技术文章",
+        "联系我"
+      ],
+      "experience_names": [
+        "AI产品",
+        "后端系统",
+        "基础设施与可观测性"
+      ],
+      "link_names": {
+        "diagnostics": "诊断流水线",
+        "support": "客服辅助",
+        "payments": "支付",
+        "auth": "认证",
+        "notifications": "通知",
+        "infra": "基础设施项目"
+      },
+      "focus_link": "智能体工作流程详情",
+      "writing_note": "我用韩语记录实现选择、运维约束及验证结果。",
+      "contact_names": [
+        "作品集",
+        "博客",
+        "邮箱",
+        "LinkedIn"
+      ],
+      "about": [
+        "我在首尔的Day1Company担任后端工程师。",
+        "基于支付、认证和服务基础设施的设计与运维经验，我将AI融入产品功能以及团队的开发和运维流程。",
+        "此前，我在EXEM开发监控服务和基于Kafka、Druid的数据采集流水线。"
+      ],
+      "experience": [
+        "使用Spring AI构建诊断与反馈流水线及客服回答辅助功能。诊断生成时间从6–7分钟缩短至1–2分钟，LLM成本降低约50%。",
+        "重新设计支付模块和认证体系，并构建多渠道通知服务。涉及PortOne，以及基于GCP KMS的RS256/JWKS签名。",
+        "完成ECS→EKS、AWS→GCP/GKE迁移，搭建ArgoCD GitOps交付流程和OpenTelemetry、LGTM可观测性环境。"
+      ],
+      "projects": [
+        "用于本地开发和集成测试的Go云服务模拟器，可连接官方AWS、GCP SDK。明确各API的支持范围，并提供结构化CLI和快照。",
+        "自托管仪表盘，汇总Claude Code、Codex、Cursor等AI编程工具的使用量、预估成本和活动记录。",
+        "Codex插件，根据任务范围分配原生子智能体，并定义以证据为基础的PR审查流程。",
+        "Codex插件，将选定资料整理为带来源和链接的Markdown知识，在Obsidian中管理各项目的Wiki。目前处于MVP阶段。",
+        "可复现的JVM并发基准测试，在I/O、CPU和高并发场景下比较Platform Thread、Virtual Thread与Kotlin Coroutine，并使用Prometheus、Grafana查看运行指标。"
+      ],
+      "current_focus": "我正在改进智能体协作流程，将Slack请求连接到开发、审查、验证和部署。面向各PR的E2E验证智能体及检查执行记录的审计智能体仍在开发中。",
+      "working_style": [
+        "从后端设计与实现延伸到所需的界面、测试、交付和可观测性。",
+        "明确智能体的职责与需要人工判断的条件，并关联请求、Issue、PR和部署记录。",
+        "依据代码、测试和运行证据判断是否完成，并在部署后再次确认实际行为。"
+      ],
+      "writing": [
+        "通过AI智能体减少团队工作流程中的瓶颈",
+        "使用Spring AI构建七阶段诊断流水线",
+        "JWT签名迁移 — 从HS256到RS256/JWKS/KMS",
+        "从Datadog迁移到LGTM技术栈"
+      ]
+    },
+    "es": {
+      "headings": [
+        "Sobre mí",
+        "Experiencia destacada",
+        "Proyectos de código abierto",
+        "En desarrollo",
+        "Cómo trabajo",
+        "Artículos",
+        "Contacto"
+      ],
+      "experience_names": [
+        "Productos con IA",
+        "Sistemas de backend",
+        "Infraestructura y observabilidad"
+      ],
+      "link_names": {
+        "diagnostics": "Pipeline de diagnóstico",
+        "support": "Asistencia al cliente",
+        "payments": "Pagos",
+        "auth": "Autenticación",
+        "notifications": "Notificaciones",
+        "infra": "Proyecto de infraestructura"
+      },
+      "focus_link": "Proyecto de flujos de trabajo con agentes",
+      "writing_note": "Escribo en coreano sobre decisiones de implementación, restricciones operativas y resultados verificados.",
+      "contact_names": [
+        "Portfolio",
+        "Blog",
+        "Correo",
+        "LinkedIn"
+      ],
+      "about": [
+        "Soy ingeniero de backend en Day1Company, en Seúl.",
+        "Aplico mi experiencia en pagos, autenticación e infraestructura de servicios a funciones de IA y a los flujos de desarrollo y operación de los equipos.",
+        "Antes, en EXEM, desarrollé servicios de monitorización y pipelines de recopilación de datos con Kafka y Druid."
+      ],
+      "experience": [
+        "Desarrollé pipelines de diagnóstico y feedback y asistencia para respuestas de atención al cliente con Spring AI. La generación de diagnósticos pasó de 6–7 a 1–2 minutos y el coste de los LLM se redujo aproximadamente un 50%.",
+        "Rediseñé módulos de pago y autenticación y desarrollé notificaciones multicanal. Mi trabajo incluye PortOne y firmas RS256/JWKS con GCP KMS.",
+        "Implementé migraciones ECS→EKS y AWS→GCP/GKE, despliegues GitOps con ArgoCD y observabilidad con OpenTelemetry y el stack LGTM."
+      ],
+      "projects": [
+        "Emulador de nube en Go para desarrollo local y pruebas de integración con los SDK oficiales de AWS y GCP. Documenta el alcance de cada API y ofrece una CLI estructurada y snapshots.",
+        "Panel autoalojado para consultar el uso, los costes estimados y la actividad de herramientas de programación con IA como Claude Code, Codex y Cursor.",
+        "Plugin de Codex para delegar tareas acotadas a subagentes nativos y realizar revisiones de PR basadas en evidencias.",
+        "Plugin de Codex que transforma fuentes seleccionadas en conocimiento Markdown enlazado y con referencias. Gestiona Wikis por proyecto en Obsidian. Actualmente está en fase MVP.",
+        "Benchmark reproducible que compara Platform Threads, Virtual Threads y Kotlin Coroutines en escenarios de I/O, CPU y alta concurrencia, con métricas de Prometheus y Grafana."
+      ],
+      "current_focus": "Estoy mejorando la colaboración entre agentes para conectar solicitudes de Slack con desarrollo, revisión, verificación y despliegue. Los agentes E2E para comprobar cada PR y los agentes de auditoría de registros de ejecución están en desarrollo.",
+      "working_style": [
+        "Conecto el diseño y la implementación del backend con las interfaces, las pruebas, la entrega y la observabilidad que necesita cada función.",
+        "Defino las responsabilidades de los agentes y las decisiones humanas, y enlazo solicitudes, issues, PR y registros de despliegue.",
+        "Compruebo la finalización con código, pruebas y evidencias de ejecución, y verifico el comportamiento tras el despliegue."
+      ],
+      "writing": [
+        "Aplicar agentes para reducir los cuellos de botella del equipo",
+        "Un pipeline de diagnóstico de siete etapas con Spring AI",
+        "Migrar la firma JWT: HS256 → RS256/JWKS/KMS",
+        "Migrar de Datadog al stack LGTM"
+      ]
+    },
+    "fr": {
+      "headings": [
+        "À propos",
+        "Expérience",
+        "Projets open source",
+        "En développement",
+        "Ma façon de travailler",
+        "Articles",
+        "Contact"
+      ],
+      "experience_names": [
+        "Produits d’IA",
+        "Systèmes backend",
+        "Infrastructure et observabilité"
+      ],
+      "link_names": {
+        "diagnostics": "Pipeline de diagnostic",
+        "support": "Assistance au support",
+        "payments": "Paiement",
+        "auth": "Authentification",
+        "notifications": "Notifications",
+        "infra": "Projet d’infrastructure"
+      },
+      "focus_link": "Projet de processus avec agents",
+      "writing_note": "J’écris en coréen sur les choix d’implémentation, les contraintes d’exploitation et les résultats vérifiés.",
+      "contact_names": [
+        "Portfolio",
+        "Blog",
+        "E-mail",
+        "LinkedIn"
+      ],
+      "about": [
+        "Je suis ingénieur backend chez Day1Company, à Séoul.",
+        "J’applique mon expérience en paiement, authentification et infrastructure de services aux fonctionnalités d’IA et aux processus de développement et d’exploitation des équipes.",
+        "Auparavant, chez EXEM, je développais des services de supervision et des pipelines de collecte de données avec Kafka et Druid."
+      ],
+      "experience": [
+        "J’ai construit des pipelines de diagnostic et de feedback ainsi qu’une aide aux réponses du support client avec Spring AI. La génération des diagnostics est passée de 6–7 à 1–2 minutes, avec une baisse d’environ 50 % des coûts des LLM.",
+        "J’ai repensé les modules de paiement et l’authentification, et développé des notifications multicanales. Mon travail inclut PortOne et la signature RS256/JWKS avec GCP KMS.",
+        "J’ai réalisé les migrations ECS→EKS et AWS→GCP/GKE, mis en place les déploiements GitOps avec ArgoCD et l’observabilité avec OpenTelemetry et la stack LGTM."
+      ],
+      "projects": [
+        "Émulateur cloud en Go pour le développement local et les tests d’intégration avec les SDK officiels AWS et GCP. Il précise le périmètre de chaque API et fournit une CLI structurée et des snapshots.",
+        "Tableau de bord auto-hébergé pour consulter l’usage, les coûts estimés et l’activité des outils de développement avec IA, dont Claude Code, Codex et Cursor.",
+        "Plugin Codex pour déléguer des tâches délimitées aux sous-agents natifs et effectuer des revues de PR fondées sur des éléments vérifiables.",
+        "Plugin Codex qui transforme des sources choisies en connaissances Markdown liées et référencées. Les Wikis propres à chaque projet sont gérés dans Obsidian. Le projet est actuellement au stade MVP.",
+        "Benchmark reproductible comparant Platform Threads, Virtual Threads et Kotlin Coroutines dans des scénarios I/O, CPU et de forte concurrence, avec des métriques Prometheus et Grafana."
+      ],
+      "current_focus": "J’améliore la collaboration entre agents pour relier les demandes Slack au développement, à la revue, à la vérification et au déploiement. Les agents E2E pour vérifier chaque PR et les agents d’audit des traces d’exécution sont en cours de développement.",
+      "working_style": [
+        "Je relie la conception et l’implémentation du backend aux interfaces, aux tests, à la livraison et à l’observabilité nécessaires.",
+        "Je définis les responsabilités des agents et les décisions humaines, et relie les demandes, issues, PR et traces de déploiement.",
+        "Je vérifie l’achèvement avec le code, les tests et des preuves d’exécution, puis le comportement après le déploiement."
+      ],
+      "writing": [
+        "Utiliser des agents pour réduire les blocages dans les processus de l’équipe",
+        "Un pipeline de diagnostic en sept étapes avec Spring AI",
+        "Migration de la signature JWT : HS256 → RS256/JWKS/KMS",
+        "Migration de Datadog vers la stack LGTM"
+      ]
+    }
+  }
+}

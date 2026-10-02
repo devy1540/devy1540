@@ -24,10 +24,89 @@
       .signal { animation: none; display: none; }
       .receipt { animation: none; opacity: .5; }
     }
+    /* Locale overrides: start */
+    .locale-override { display: none; }
+    .locale-override:target { display: inline; }
+    .locale-override:target ~ switch { display: none; }
+    /* Locale overrides: end */
   </style>
   <rect x=".5" y=".5" width="735" height="341" rx="12" fill="#0D1117" stroke="#323A45"/>
   <text x="36" y="49" class="muted" font-size="12" font-weight="500">Applied AI Engineer <tspan fill="#323A45"> | </tspan> Backend Engineer</text>
   <!-- First supported match wins: ko, ja, zh-Hans, es, fr; English is the fallback. -->
+  <!-- Locale overrides: start -->
+  <g xmlns="http://www.w3.org/2000/svg" id="locale-en" class="locale-override" lang="en">
+    <g lang="en">
+      <g fill="#EEF1F5" font-size="34" font-weight="750" letter-spacing="-1">
+        <text x="36" y="121">I build with AI,</text>
+        <text x="36" y="167">and ship products.</text>
+      </g>
+      <g class="muted" font-size="13">
+        <text x="36" y="213">From design to implementation and operations,</text>
+        <text x="36" y="237">I build and verify it myself.</text>
+      </g>
+    </g>
+  </g>
+  <g xmlns="http://www.w3.org/2000/svg" id="locale-ko" class="locale-override" lang="ko">
+    <g lang="ko">
+      <g fill="#EEF1F5" font-size="34" font-weight="750" letter-spacing="-1.5">
+        <text x="36" y="121">AI를 활용하고,</text>
+        <text x="36" y="167">제품으로 완성합니다.</text>
+      </g>
+      <g class="muted" font-size="13">
+        <text x="36" y="213">설계부터 구현·운영까지,</text>
+        <text x="36" y="237">직접 만들고 검증합니다.</text>
+      </g>
+    </g>
+  </g>
+  <g xmlns="http://www.w3.org/2000/svg" id="locale-ja" class="locale-override" lang="ja">
+    <g lang="ja">
+      <g fill="#EEF1F5" font-size="34" font-weight="750" letter-spacing="-1">
+        <text x="36" y="121">AIを活用し、</text>
+        <text x="36" y="167">プロダクトを形に。</text>
+      </g>
+      <g class="muted" font-size="13">
+        <text x="36" y="213">設計から実装・運用まで、</text>
+        <text x="36" y="237">自らつくり、検証します。</text>
+      </g>
+    </g>
+  </g>
+  <g xmlns="http://www.w3.org/2000/svg" id="locale-zh-CN" class="locale-override" lang="zh-Hans">
+    <g lang="zh-Hans">
+      <g fill="#EEF1F5" font-size="34" font-weight="750" letter-spacing="-1">
+        <text x="36" y="121">运用 AI，</text>
+        <text x="36" y="167">打造产品。</text>
+      </g>
+      <g class="muted" font-size="13">
+        <text x="36" y="213">从设计到开发与运维，</text>
+        <text x="36" y="237">亲自构建并验证。</text>
+      </g>
+    </g>
+  </g>
+  <g xmlns="http://www.w3.org/2000/svg" id="locale-es" class="locale-override" lang="es">
+    <g lang="es">
+      <g fill="#EEF1F5" font-size="34" font-weight="750" letter-spacing="-1">
+        <text x="36" y="121">Creo con IA,</text>
+        <text x="36" y="167">y entrego productos.</text>
+      </g>
+      <g class="muted" font-size="13">
+        <text x="36" y="213">Del diseño al desarrollo y la operación,</text>
+        <text x="36" y="237">lo construyo y verifico personalmente.</text>
+      </g>
+    </g>
+  </g>
+  <g xmlns="http://www.w3.org/2000/svg" id="locale-fr" class="locale-override" lang="fr">
+    <g lang="fr">
+      <g fill="#EEF1F5" font-size="34" font-weight="750" letter-spacing="-1">
+        <text x="36" y="121">Je crée avec l’IA,</text>
+        <text x="36" y="167">et livre des produits.</text>
+      </g>
+      <g class="muted" font-size="13">
+        <text x="36" y="213">De la conception au code et à l’exploitation,</text>
+        <text x="36" y="237">je construis et vérifie moi-même.</text>
+      </g>
+    </g>
+  </g>
+  <!-- Locale overrides: end -->
   <switch>
     <g systemLanguage="ko,ko-KR" lang="ko">
       <g fill="#EEF1F5" font-size="34" font-weight="750" letter-spacing="-1.5">
