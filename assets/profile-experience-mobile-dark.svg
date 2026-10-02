@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="390" viewBox="0 0 360 390" role="img" aria-labelledby="title desc">
+  <title id="title">Experience | AI Agents · Backend · Infrastructure</title>
+  <desc id="desc">AI 진단·상담 보조·개발 및 리뷰 에이전트, 결제·인증·알림, 클라우드 이관·GitOps·관측 환경. 자세한 경험과 개발 기록은 dev.devy.dev에서 확인할 수 있습니다.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+    .muted { fill: #A3ADB9; }
+    .copy { fill: #E2E7EE; font-size: 12px; font-weight: 500; }
+    .heading { fill: #EEF1F5; font-size: 20px; font-weight: 600; letter-spacing: -.5px; }
+    .label { fill: #A3ADB9; font-size: 13px; font-weight: 600; }
+    .footer { fill: #A3ADB9; font-size: 11px; font-weight: 500; }
+    .domain { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-weight: 400; }
+  </style>
+  <rect x=".5" y=".5" width="359" height="389" rx="12" fill="#0D1117" stroke="#323A45"/>
+  <text x="25" y="42" class="label">Experience</text>
+  <path d="M25 161H335" stroke="#323A45"/>
+  <path d="M25 242H335" stroke="#323A45"/>
+  <path d="M25 328H335" stroke="#323A45"/>
+  <text x="25" y="103" class="label">AI &amp; Agents</text>
+  <text x="25" y="184" class="label">Backend</text>
+  <text x="25" y="265" class="label">Infrastructure</text>
+  <!-- First supported match wins; English is the fallback. -->
+  <switch>
+    <g systemLanguage="ko,ko-KR" lang="ko">
+      <text x="25" y="75" class="heading">만들고 운영해 온 것들</text>
+      <text x="25" y="126" class="copy">AI 진단 · 상담 보조</text>
+      <text x="25" y="146" class="copy">개발·리뷰 에이전트</text>
+      <text x="25" y="207" class="copy">결제 · 인증 · 멀티채널 알림</text>
+      <text x="25" y="288" class="copy">클라우드 이관 · GitOps</text>
+      <text x="25" y="308" class="copy">관측 환경</text>
+      <text x="25" y="351" class="footer">경험과 개발 기록 더 보기 ↗</text>
+    </g>
+    <g systemLanguage="ja,ja-JP" lang="ja">
+      <text x="25" y="75" class="heading">つくり、運用してきたもの</text>
+      <text x="25" y="126" class="copy">AI診断 · CS回答支援</text>
+      <text x="25" y="146" class="copy">開発・レビューエージェント</text>
+      <text x="25" y="207" class="copy">決済 · 認証</text>
+      <text x="25" y="227" class="copy">マルチチャネル通知</text>
+      <text x="25" y="288" class="copy">クラウド移行 · GitOps</text>
+      <text x="25" y="308" class="copy">監視・可観測性</text>
+      <text x="25" y="351" class="footer">経験と開発の記録を読む ↗</text>
+    </g>
+    <g systemLanguage="zh,zh-CN,zh-SG,zh-Hans,zh-Hans-CN,zh-Hans-SG" lang="zh-Hans">
+      <text x="25" y="75" class="heading">构建与运维</text>
+      <text x="25" y="126" class="copy">AI诊断 · 客服辅助</text>
+      <text x="25" y="146" class="copy">开发与审查智能体</text>
+      <text x="25" y="207" class="copy">支付 · 认证</text>
+      <text x="25" y="227" class="copy">多渠道通知</text>
+      <text x="25" y="288" class="copy">云迁移 · GitOps</text>
+      <text x="25" y="308" class="copy">可观测性</text>
+      <text x="25" y="351" class="footer">查看项目与开发记录 ↗</text>
+    </g>
+    <g systemLanguage="es,es-ES,es-419,es-MX,es-US,es-AR,es-CO,es-CL,es-PE" lang="es">
+      <text x="25" y="75" class="heading">Desarrollo y operación</text>
+      <text x="25" y="126" class="copy">Diagnóstico con IA · Soporte al cliente</text>
+      <text x="25" y="146" class="copy">Agentes de desarrollo y revisión</text>
+      <text x="25" y="207" class="copy">Pagos · Autenticación</text>
+      <text x="25" y="227" class="copy">Notificaciones multicanal</text>
+      <text x="25" y="288" class="copy">Migraciones cloud · GitOps</text>
+      <text x="25" y="308" class="copy">Observabilidad</text>
+      <text x="25" y="351" class="footer">Ver proyectos y notas técnicas ↗</text>
+    </g>
+    <g systemLanguage="fr,fr-FR,fr-CA,fr-BE,fr-CH" lang="fr">
+      <text x="25" y="75" class="heading">Création et exploitation</text>
+      <text x="25" y="126" class="copy">Diagnostics IA · Aide au support</text>
+      <text x="25" y="146" class="copy">Agents de développement et de revue</text>
+      <text x="25" y="207" class="copy">Paiement · Authentification</text>
+      <text x="25" y="227" class="copy">Notifications multicanales</text>
+      <text x="25" y="288" class="copy">Migrations cloud · GitOps</text>
+      <text x="25" y="308" class="copy">Observabilité</text>
+      <text x="25" y="351" class="footer">Voir les projets et les articles ↗</text>
+    </g>
+    <g lang="en">
+      <text x="25" y="75" class="heading">Built &amp; operated</text>
+      <text x="25" y="126" class="copy">AI diagnostics · CS assistance</text>
+      <text x="25" y="146" class="copy">Development &amp; review agents</text>
+      <text x="25" y="207" class="copy">Payments · Authentication</text>
+      <text x="25" y="227" class="copy">Multi-channel notifications</text>
+      <text x="25" y="288" class="copy">Cloud migrations · GitOps</text>
+      <text x="25" y="308" class="copy">Observability</text>
+      <text x="25" y="351" class="footer">Explore projects &amp; engineering notes ↗</text>
+    </g>
+  </switch>
+  <text x="335" y="372" text-anchor="end" class="footer domain">dev.devy.dev</text>
+</svg>
