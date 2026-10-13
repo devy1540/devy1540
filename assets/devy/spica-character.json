@@ -1,0 +1,63 @@
+{
+  "name": "Spica",
+  "owner": "Devy",
+  "version": "2.0.0",
+  "kind": "personal-mascot",
+  "source": "spica-character.svg",
+  "reference": "spica-character-g.png",
+  "description": "매끈하게 닫힌 원형 금빛 고리 안에 졸린 남색 얼굴이 있고, 오른쪽 눈 위에 독립된 금색 초승달과 작은 4각별이 떠 있는 Devy의 개인 마스코트 스피카.",
+  "geometry": {
+    "viewBox": "0 0 960 960",
+    "aspectRatio": "1:1",
+    "artworkTranslation": {
+      "x": 0,
+      "y": 0
+    },
+    "body": "동심원 두 개로 그리는 매끈하고 완전히 닫힌 금빛 고리와 둥근 남색 중심",
+    "crescent": "얼굴 오른쪽 눈 위의 독립된 금색 초승달; 링과 달 사이에 남색 여백 유지",
+    "star": "초승달의 열린 쪽에 떠 있는 작은 금색 4각별 하나",
+    "face": "흰 졸린 눈 두 개와 작은 미소",
+    "feet": "고리 아래의 작고 둥근 발 두 개",
+    "details": [
+      "왼쪽 위의 3점 별자리",
+      "보랏빛 볼터치",
+      "오른쪽 아래의 처녀자리 기호 ♍"
+    ],
+    "faviconViewBox": "85 95 790 790"
+  },
+  "palette": {
+    "gold": "#FFE58D",
+    "navy": "#262449",
+    "outline": "#1D1D42",
+    "face": "#FFFDF4",
+    "blush": "#C7A0F2",
+    "background": "transparent"
+  },
+  "usage": {
+    "rules": [
+      "Devy는 사용자 이름이고 Spica는 마스코트 이름이다.",
+      "매끈하게 닫힌 원형 금빛 고리, 둥근 남색 얼굴과 작은 발 두 개를 유지한다.",
+      "오른쪽 눈 위의 독립 초승달과 열린 쪽의 작은 4각별 하나를 유지하고, 링과 달을 연결하거나 말린 돌기를 만들지 않는다.",
+      "표정과 미세 움직임을 바꾸어도 얼굴의 기본 비율을 유지한다.",
+      "작은 아이콘에서는 별자리, 볼터치와 ♍ 장식을 생략할 수 있다.",
+      "파비콘처럼 작은 아이콘에서도 초승달과 4각별은 핵심 특징으로 보존한다.",
+      "다크 모드에서도 고리와 얼굴의 고정 색상을 유지한다.",
+      "기본 그림은 spica-character-g.png이며, SVG는 같은 G 디자인의 웹용 벡터 버전이다."
+    ]
+  },
+  "card": "devy-character-card.txt",
+  "prompt": "spica-character-prompt.txt",
+  "generation": {
+    "tool": "image_gen",
+    "transparent_background": true,
+    "prompt": "spica-g-image-prompt.txt",
+    "reference": "references/spica-design-comparison-d-g.png",
+    "referenceSelection": "lower-right G"
+  },
+  "raster": {
+    "width": 1254,
+    "height": 1254,
+    "background": "transparent"
+  },
+  "paletteSource": "web-svg"
+}

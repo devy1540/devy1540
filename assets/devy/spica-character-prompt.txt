@@ -1,0 +1,30 @@
+스피카(Spica) G 기본형 재사용 프롬프트
+버전 2.0.0
+
+사용 방법
+spica-character-g.png를 기준 이미지로 첨부하고 아래 프롬프트와 변경할 표정·포즈·상황을 함께 제공한다.
+저장된 기본 그림 자체가 필요하면 PNG 또는 SVG를 그대로 사용한다.
+
+한국어 프롬프트
+첨부한 기본 이미지의 스피카(Spica)를 같은 캐릭터로 유지해서 그려줘. Spica는 Devy의 개인 마스코트야. 두꺼운 짙은 남색 외곽선, 매끈하고 완전히 닫힌 연한 금빛 원형 고리, 고리 안의 둥근 남색 얼굴, 간단한 흰 눈 두 개와 작은 입, 아래의 둥근 금빛 발 두 개를 유지해줘. 기본 표정은 반쯤 뜬 졸린 눈과 무언가를 알고 있는 듯한 작은 미소야.
+
+핵심 표식은 얼굴 오른쪽 위, 오른쪽 눈 위에 있는 작은 금빛 초승달과 네 갈래 별 하나야. 초승달은 오른쪽으로 열려 있고, 작은 별은 그 열린 부분 안에 들어 있어. 달과 별은 고리나 눈에 닿지 않고 주변에 남색 여백이 있어. 작은 아이콘에서도 달과 별을 유지해줘.
+
+왼쪽 위 고리의 세 점 별자리 연결, 보랏빛 볼터치, 오른쪽 아래 고리의 처녀자리 기호 ♍는 상세 그림의 선택 장식이야. 기본 이미지의 금빛·남색·연보라 색과 간단하고 귀엽지만 조금 수상한 분위기, 둥근 비율을 유지해줘. 그림은 따라 그리기 쉬운 깔끔한 평면 일러스트로 표현해줘. 배경은 별도 요청이 없으면 투명하게 해줘.
+
+고리를 안으로 말거나 손·손가락·팔처럼 보이는 돌기를 만들지 말아줘. 초승달을 고리에 연결하지 말고, 별을 여러 개 추가하거나 사람 형태로 바꾸지 말아줘. 별도 요청이 없으면 옷·모자·새 장신구·문자·워터마크를 넣지 말아줘.
+
+이번 그림에서 변경할 내용: [표정 / 포즈 / 상황 / 배경 요청]
+이 변경 사항 외에는 스피카의 형태, 색과 핵심 표식을 유지해줘.
+
+English prompt
+Use the attached spica-character-g.png as the identity reference. Draw the same character, Spica, Devy's personal mascot. Preserve the thick dark navy outline, smooth fully closed pale buttery-gold circular ring, round navy face, two simple white eyes, tiny mouth, and two small rounded gold feet. The default expression is sleepy, half-lidded eyes with a small knowing smile: cute and slightly suspicious.
+
+The signature is one small gold classic crescent above the right eye in the upper-right navy face, opening to the right, with one tiny four-point gold star nestled in that opening. Keep navy space between this mark and the ring or eyes. Preserve the crescent and star even in small icons.
+
+The three-dot constellation on the upper-left rim, lilac cheek strokes, and Virgo glyph ♍ on the lower-right rim are optional details. Preserve the reference's gold, navy and lilac palette, round proportions, and clean, easy-to-draw flat illustration style. Use a transparent background unless a different background is requested.
+
+Do not create an inward curl, spiral, finger-like protrusion, hand or arm. Do not join the crescent to the ring, add extra stars, turn the character into a human, or add clothing, hats, accessories, text or watermarks unless requested.
+
+Requested change: [expression / pose / situation / background]
+Change only what is requested while preserving Spica's identity, colors and signature mark.

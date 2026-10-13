@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="960" viewBox="0 0 960 960" role="img" aria-label="Spica, Devy's golden ring mascot">
+  <title>Spica</title>
+  <desc>A sleepy round golden ring with a dark navy face, a separate crescent and four-point star above its right eye, two small feet, and a Virgo mark.</desc>
+<g class="spica-character">
+  <g class="spica-feet" fill="#FFE58D" stroke="#1D1D42" stroke-width="14">
+    <ellipse cx="340" cy="819" rx="49" ry="46"/>
+    <ellipse cx="620" cy="819" rx="49" ry="46"/>
+  </g>
+  <circle class="spica-ring" cx="480" cy="470" r="355" fill="#FFE58D" stroke="#1D1D42" stroke-width="14"/>
+  <circle class="spica-aperture" cx="480" cy="470" r="270" fill="#262449"/>
+  <g class="spica-celestial" transform="translate(0 20)" fill="#FFE58D">
+    <path class="spica-crescent" d="M638 301A48 48 0 1 0 655 378A41 41 0 0 1 638 301Z"/>
+    <path class="spica-star" d="M650 316Q654 334 668 338Q654 342 650 360Q646 342 632 338Q646 334 650 316Z"/>
+  </g>
+  <g class="spica-face">
+    <g class="spica-eye" fill="#FFFDF4" stroke="#FFFDF4" stroke-linecap="round" stroke-linejoin="round">
+      <path class="spica-eye-left" stroke="none" d="M307 467H399C399 498 381 519 355 519C329 519 313 498 313 467Z"/>
+      <path stroke-width="10" fill="none" d="M307 467H399"/>
+      <path class="spica-eye-right" stroke="none" d="M561 467H653C653 498 635 519 609 519C583 519 567 498 567 467Z"/>
+      <path stroke-width="10" fill="none" d="M561 467H653"/>
+    </g>
+    <path class="spica-mouth" fill="none" stroke="#FFFDF4" stroke-width="11" stroke-linecap="round" d="M463 539C479 546 496 542 507 532"/>
+  </g>
+  <g class="spica-detail spica-constellation" fill="#262449" stroke="#262449" stroke-width="5" stroke-linecap="round">
+    <path fill="none" d="M246 294L260 242L320 212"/>
+    <circle cx="246" cy="294" r="12" stroke="none"/>
+    <circle cx="260" cy="242" r="12" stroke="none"/>
+    <circle cx="320" cy="212" r="13" stroke="none"/>
+  </g>
+  <g class="spica-detail spica-blush" fill="none" stroke="#C7A0F2" stroke-width="12" stroke-linecap="round">
+    <path d="M292 548L298 535M320 548L326 535M636 548L642 535M664 548L670 535"/>
+  </g>
+  <g class="spica-detail spica-virgo" transform="translate(142 173) scale(0.75)" fill="none" stroke="#262449" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M719 667C724 666 727 669 727 677V713M727 677C727 661 746 657 746 676V708M746 677C746 658 765 650 765 672V707M765 681C768 669 781 668 783 679C787 694 773 710 753 718M762 707C761 715 768 720 774 718"/>
+  </g>
+</g>
+</svg>
