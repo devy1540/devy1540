@@ -1,0 +1,113 @@
+{
+  "ok": true,
+  "pet_name": "스피카 (개선판)",
+  "spriteVersionNumber": 2,
+  "source": {
+    "repository": "devy1540/devy1540",
+    "source_commit": "57cef62e4dd5ba7126f8a48d8ed3c3d59689fba0",
+    "character_version": "G 2.0.0",
+    "files": [
+      {
+        "repo_path": "assets/devy/spica-character-prompt.txt",
+        "blob": "73784d91ce73764ac30068a7624666f88fce35f8",
+        "sha256": "51bef47e751e180e210e1a76dbc5e01257c5ac9945b13cd97adf43b552a31e82",
+        "role": "primary_character_prompt"
+      },
+      {
+        "repo_path": "assets/devy/spica-character-g.png",
+        "blob": "c5834a7380d15ceb0e4e6a7405f0e0799bae5d33",
+        "sha256": "dd81d00c7948a05faf851f53dffb92f4d900e7f3441cb8ac8911319052991dfc",
+        "role": "primary_base_image"
+      },
+      {
+        "repo_path": "assets/devy/spica-g-image-prompt.txt",
+        "blob": "0e055ba106307366c474fde67c33242527240927",
+        "sha256": "c82b67a4ea352a33b17c3c17376386bb29263513439b97c371a9228a16770835",
+        "role": "base_image_generation_prompt"
+      },
+      {
+        "repo_path": "assets/devy/devy-character-card.txt",
+        "blob": "5c3b1f5d8a6eee805d0085f027106dc1ba2be132",
+        "sha256": "4caaa64e9ab4119dc612bf12120de596dae24e7adcd3c6e479b1ba4369297a62",
+        "role": "character_card"
+      }
+    ]
+  },
+  "required_frames": 73,
+  "unused_transparent_cells": 15,
+  "installed_package": "local-pets/spica-improved-v2",
+  "previous_spica_preserved": true,
+  "spritesheet_sha256": "402c778d07030a6c8a36955548fbad659a9274ad2c9d9e8c0906a37064005637",
+  "encoded_bytes": 2533782,
+  "completed_at": "2026-10-13T07:15:46.407038+00:00",
+  "gates": {
+    "atlas": true,
+    "quality": true,
+    "chroma": true,
+    "frames": true,
+    "blind": true,
+    "visual": "pass",
+    "native": true
+  },
+  "accepted_warnings": [
+    "022.5의위쪽축은단독보다neutral/인접frame비교에서읽히며 labeledloopup-right확인.",
+    "067.5오른쪽이동강하고V작지만neutral보다높아up-right유지.",
+    "292.5V특히약하지만LEFT유지·눈꺼풀/입상승및315연결로up-left읽힘.",
+    "157.5→180수평얼굴재중앙화강하나같은눈/입saccade,몸/표식고정으로minor.",
+    "337.5→000눈기울기/간격변하지만두흰눈정체성유지및UP연결로minor."
+  ],
+  "jump": {
+    "idle_baseline": 194,
+    "jump_baselines": [
+      201,
+      191,
+      180,
+      190,
+      201
+    ],
+    "airborne_lift_pixels": 21,
+    "landing_delta_pixels": 7
+  },
+  "look_registration": {
+    "neutral_center_x": 96.0,
+    "look_centers_x": [
+      96.0,
+      95.0,
+      96.0,
+      96.0,
+      95.0,
+      96.0,
+      95.0,
+      95.0,
+      96.0,
+      95.5,
+      96.0,
+      96.0,
+      95.5,
+      96.0,
+      96.0,
+      95.0
+    ],
+    "look_widths": [
+      172,
+      172,
+      172,
+      172,
+      172,
+      172,
+      172,
+      172,
+      172,
+      173,
+      172,
+      172,
+      173,
+      172,
+      172,
+      172
+    ],
+    "maximum_center_drift_pixels": 1.0,
+    "maximum_width_ratio": 1.005813953488372
+  },
+  "qa_dir": "source-run/qa"
+}

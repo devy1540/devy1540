@@ -1,0 +1,124 @@
+{
+  "reviewer": "g_final_qa independentnativeorderedloop",
+  "directions": [
+    {
+      "label": "000",
+      "expected": "up",
+      "observed": "up",
+      "verdict": "pass",
+      "reason": "두 눈과 입이 neutral보다 명확히 높고 중앙에 정렬. 위쪽시선분명, 오른쪽눈과달·별 사이 남색여백 유지."
+    },
+    {
+      "label": "022.5",
+      "expected": "up-right",
+      "observed": "up-right",
+      "verdict": "warning",
+      "reason": "H: 눈쌍·입이 neutral보다오른쪽. V: neutral보다높고000보다낮아지는중간단계. 단독수직판별약하지만 labeled순서up-right확인."
+    },
+    {
+      "label": "045",
+      "expected": "up-right",
+      "observed": "up-right",
+      "verdict": "pass",
+      "reason": "H: 눈쌍중심·입이 neutral보다오른쪽. V: neutral보다위,022.5에서오른쪽cardinal로내려가는연결일관."
+    },
+    {
+      "label": "067.5",
+      "expected": "up-right",
+      "observed": "up-right",
+      "verdict": "warning",
+      "reason": "H: 두눈·입 명확히오른쪽. V: neutral보다조금높고090보다위. 작은위쪽축반전없음."
+    },
+    {
+      "label": "090",
+      "expected": "right",
+      "observed": "right",
+      "verdict": "pass",
+      "reason": "눈쌍·입 오른쪽이동뚜렷하고수직위치neutral부근. 좁아진간격에도두흰반원눈·졸린인상 유지."
+    },
+    {
+      "label": "112.5",
+      "expected": "down-right",
+      "observed": "down-right",
+      "verdict": "pass",
+      "reason": "H: 눈쌍·입 오른쪽유지. V:090및neutral보다내려가 down축읽힘."
+    },
+    {
+      "label": "135",
+      "expected": "down-right",
+      "observed": "down-right",
+      "verdict": "pass",
+      "reason": "H: 눈쌍중심·입 neutral보다오른쪽. V: neutral보다명확히낮고112.5에서아래로연결."
+    },
+    {
+      "label": "157.5",
+      "expected": "down-right",
+      "observed": "down-right",
+      "verdict": "pass",
+      "reason": "H: 눈쌍·입 오른쪽유지. V: 낮은위치 down축명확.180중앙복귀는같은얼굴시선전환,몸/표식jump아님."
+    },
+    {
+      "label": "180",
+      "expected": "down",
+      "observed": "down",
+      "verdict": "pass",
+      "reason": "눈쌍·입 neutral보다뚜렷하게낮고수평중심복귀. down명확,얼굴/링/발 겹침/clip없음."
+    },
+    {
+      "label": "202.5",
+      "expected": "down-left",
+      "observed": "down-left",
+      "verdict": "pass",
+      "reason": "H:180보다눈쌍·입왼쪽,neutral중심왼쪽. V:낮은위치유지."
+    },
+    {
+      "label": "225",
+      "expected": "down-left",
+      "observed": "down-left",
+      "verdict": "pass",
+      "reason": "H: 눈쌍·입 neutral보다명확히왼쪽. V: neutral보다낮고202.5에서LEFTcardinal로올라가는중간위치."
+    },
+    {
+      "label": "247.5",
+      "expected": "down-left",
+      "observed": "down-left",
+      "verdict": "pass",
+      "reason": "H:두눈·입왼쪽. V:270및neutral보다조금낮아down-left유지."
+    },
+    {
+      "label": "270",
+      "expected": "left",
+      "observed": "left",
+      "verdict": "pass",
+      "reason": "눈쌍·입왼쪽뚜렷하고눈수직위치neutral부근. 두흰반원눈분리,LEFT명확."
+    },
+    {
+      "label": "292.5",
+      "expected": "up-left",
+      "observed": "up-left",
+      "verdict": "warning",
+      "reason": "H:눈쌍·입명확히왼쪽. V:왼눈꺼풀조금상승·입270/neutral보다높음. 약한V지만315높은시선으로연결,down역전없음."
+    },
+    {
+      "label": "315",
+      "expected": "up-left",
+      "observed": "up-left",
+      "verdict": "pass",
+      "reason": "H:눈쌍·입 neutral보다왼쪽. V:왼눈크게상승,눈쌍평균위치·입도neutral보다높고기울기upleft강화."
+    },
+    {
+      "label": "337.5",
+      "expected": "up-left",
+      "observed": "up-left",
+      "verdict": "pass",
+      "reason": "H:눈쌍·입왼쪽유지. V:왼눈·입315보다더높아up분명.000연결에서눈기울기·간격변하지만2눈유지,링/달/별/발고정."
+    }
+  ],
+  "review_warnings": [
+    "022.5의위쪽축은단독보다neutral/인접frame비교에서읽히며 labeledloopup-right확인.",
+    "067.5오른쪽이동강하고V작지만neutral보다높아up-right유지.",
+    "292.5V특히약하지만LEFT유지·눈꺼풀/입상승및315연결로up-left읽힘.",
+    "157.5→180수평얼굴재중앙화강하나같은눈/입saccade,몸/표식고정으로minor.",
+    "337.5→000눈기울기/간격변하지만두흰눈정체성유지및UP연결로minor."
+  ]
+}

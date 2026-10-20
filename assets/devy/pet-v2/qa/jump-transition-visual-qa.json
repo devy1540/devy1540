@@ -1,0 +1,7 @@
+{
+  "visual_qa": "pass",
+  "reviewer": "g_jump_early_qa independent worker",
+  "reason": "실제17프레임을192x208원본크기로검토. 약4pct크기차이는 작은점프 안에서자연스럽고 진입/착지 뒤 부자연스런축소확대 pop 없음. 둥근몸체, 링두께, 얼굴문양 정체성 유지, 착지 연결과여백 정상, clipping 없음.",
+  "native_pop": "no",
+  "repair_rows": []
+}

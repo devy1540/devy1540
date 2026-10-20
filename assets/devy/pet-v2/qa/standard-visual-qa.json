@@ -1,0 +1,6 @@
+{
+  "visual_qa": "pass",
+  "qa_note": "원본·접촉 시트·9개 GIF의 실제 전체 프레임 확인. 프레임수6/8/8/4/5/8/6/6/6일치. 닫힌goldring/opaque navyface/two pupilfreewhiteeyes/twofeet/Gmarks 유지. 좌우시선과발교대,붙은하단발인사,점프상승착지,생각동작검토blink자연스러움. clipping/detached effects/extra limbs/opaque bg/inertidle/visiblepops없음.",
+  "repair_rows": [],
+  "warnings": []
+}

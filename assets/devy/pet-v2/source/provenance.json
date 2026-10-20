@@ -1,0 +1,31 @@
+{
+  "repository": "devy1540/devy1540",
+  "source_commit": "57cef62e4dd5ba7126f8a48d8ed3c3d59689fba0",
+  "character_version": "G 2.0.0",
+  "files": [
+    {
+      "repo_path": "assets/devy/spica-character-prompt.txt",
+      "blob": "73784d91ce73764ac30068a7624666f88fce35f8",
+      "sha256": "51bef47e751e180e210e1a76dbc5e01257c5ac9945b13cd97adf43b552a31e82",
+      "role": "primary_character_prompt"
+    },
+    {
+      "repo_path": "assets/devy/spica-character-g.png",
+      "blob": "c5834a7380d15ceb0e4e6a7405f0e0799bae5d33",
+      "sha256": "dd81d00c7948a05faf851f53dffb92f4d900e7f3441cb8ac8911319052991dfc",
+      "role": "primary_base_image"
+    },
+    {
+      "repo_path": "assets/devy/spica-g-image-prompt.txt",
+      "blob": "0e055ba106307366c474fde67c33242527240927",
+      "sha256": "c82b67a4ea352a33b17c3c17376386bb29263513439b97c371a9228a16770835",
+      "role": "base_image_generation_prompt"
+    },
+    {
+      "repo_path": "assets/devy/devy-character-card.txt",
+      "blob": "5c3b1f5d8a6eee805d0085f027106dc1ba2be132",
+      "sha256": "4caaa64e9ab4119dc612bf12120de596dae24e7adcd3c6e479b1ba4369297a62",
+      "role": "character_card"
+    }
+  ]
+}

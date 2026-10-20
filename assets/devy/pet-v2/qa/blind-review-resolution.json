@@ -1,0 +1,16 @@
+{
+  "decision": "accept",
+  "severity": "minor",
+  "stage": "cardinal-source-review",
+  "failed_checks": [
+    "Creator numericalspacing heuristic: R/L eye-gap25pct narrower thanUP.",
+    "Creator heuristic of5pxnavygap: nativeUP gap2-3px."
+  ],
+  "evidence": [
+    "Independent normal192x208 review confirms sameGpersona andtwo originalwhite half-disc eyeconstruction.",
+    "Independent normal-size review confirms actualNAVYgap, no goldmark-eyecontact/merge/clipping.",
+    "All4 cardinaldirections unmistakable."
+  ],
+  "reviewed_by": "parent with independent g_cardinal_review",
+  "major_failures_waived": false
+}

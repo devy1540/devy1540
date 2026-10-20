@@ -1,0 +1,101 @@
+[
+  {
+    "id": "base",
+    "completed_at": "2026-10-13T06:09:36.718523+00:00",
+    "qa_note": "G closed ring, crescent-star mark, 2 pupil-free eyes and 2 feet, one whole-body sprite with clean cyan background verified by worker.",
+    "file": "generated/base.png",
+    "sha256": "f3f3fe411abde16c4210954629adf8b3dc09bcedb81da28f5f617ea4f649bd60"
+  },
+  {
+    "id": "idle",
+    "completed_at": "2026-10-13T06:13:13.920181+00:00",
+    "qa_note": "Six calmblink/breathingposes exactGstyle, stablefooter; structuralQApassed.",
+    "file": "generated/idle.png",
+    "sha256": "3e72085e0639947f5e6c17f8b354529a9d428ee4b534f4b51281c75cb9423e6b"
+  },
+  {
+    "id": "running-right",
+    "completed_at": "2026-10-13T06:14:14.220816+00:00",
+    "qa_note": "Independent sourceQA and component structural checks passed. Gidentity, 2eyes/2feet, closedring and crescentstar preserved.",
+    "file": "generated/running-right.png",
+    "sha256": "0c9e86add646bd524762b1c159df560a95ee0bc601a6601292d4798d3408b77f"
+  },
+  {
+    "id": "running-left",
+    "completed_at": "2026-10-13T06:31:17.997048+00:00",
+    "qa_note": "All8 eyepair/mouthLEFT ofdiskcenter, twoeyesandcross-stepfeet/closedring/Gsymbols retained. Facialoffset12-16sourcepx smaller thananchor23px; directionclear, exactanchorcoords nothardgate. Componentchecks passed.",
+    "reference_strategy": "Generated LEFT anchor is authoritative for face direction; remove contradictory right-face strip. Right row remains approved prerequisite for mirror decision, not generation grounding.",
+    "file": "generated/running-left.png",
+    "sha256": "f3b5eed815c9716c6e0a08fa2b653ce24f2b50199c32d189db1fa2741256d851"
+  },
+  {
+    "id": "waving",
+    "completed_at": "2026-10-13T06:14:14.221034+00:00",
+    "qa_note": "Independent sourceQA and component structural checks passed. Gidentity, 2eyes/2feet, closedring and crescentstar preserved.",
+    "file": "generated/waving.png",
+    "sha256": "1a7fcf503c52e563f7d61d22f4a985ca7293538d61c94f4225428522f08a4750"
+  },
+  {
+    "id": "jumping",
+    "completed_at": "2026-10-13T06:11:53.957190+00:00",
+    "qa_note": "Five small-lift poses; exact originalG identity and fullbody consistent. Structuralcheckpassed.",
+    "file": "generated/jumping.png",
+    "sha256": "0c3ee68bfec01465ee63989b4111171b7200ae9baebdd44a6a092a78491e0497"
+  },
+  {
+    "id": "failed",
+    "completed_at": "2026-10-13T06:15:04.477010+00:00",
+    "qa_note": "8 sad/failureposes withGidentity noeffects, sourceQAandcomponentchecks passed.",
+    "file": "generated/failed.png",
+    "sha256": "524207215987ffe2519e86f258842c457331ed6a95095e363ed33c7300cc9c20"
+  },
+  {
+    "id": "waiting",
+    "completed_at": "2026-10-13T06:16:34.673588+00:00",
+    "qa_note": "6 fullbodyposes sourceQA+componentchecks passed, exactGmarkings and plantedfeet/statesemantics.",
+    "file": "generated/waiting.png",
+    "sha256": "af263cedaedc15a5a396bffe3484c33d1c9ce2cdb3cb833cf37ecb61ce14cb2e"
+  },
+  {
+    "id": "running",
+    "completed_at": "2026-10-13T06:16:34.673860+00:00",
+    "qa_note": "6 fullbodyposes sourceQA+componentchecks passed, exactGmarkings and plantedfeet/statesemantics.",
+    "file": "generated/running.png",
+    "sha256": "8e929d4dd06d21eeb07275caf7dffefab09a85584cd8ea6185e627a32b50801d"
+  },
+  {
+    "id": "review",
+    "completed_at": "2026-10-13T06:18:58.903172+00:00",
+    "qa_note": "6inspectionposes blink/headincline andsubtle scanning preservedGidentity componentchecks pass.",
+    "file": "generated/review.png",
+    "sha256": "63026e717effadcba024b025bcda8a2637e34951e92b50c400960bb019873563"
+  },
+  {
+    "id": "look-cardinals",
+    "completed_at": "2026-10-13T06:44:28.538197+00:00",
+    "qa_note": "All4cardinals pass independentnativeQA. Originaleyeconstruction/Gpersona preserved. Sideeye-gap tightening andUPvisible2-3px navygap acceptedminor; no contact/missingeyes/identitychange.",
+    "file": "generated/look-cardinals.png",
+    "sha256": "9f4d28e041d6276fc50ba896981292028cd394a9f178d643b45f8aa4c520113a"
+  },
+  {
+    "id": "look-row-9",
+    "completed_at": "2026-10-13T06:52:58.679501+00:00",
+    "qa_note": "8registeredwholebodies/16eyes, clipping/registrationgatepassed; UP-RIGHT-DOWNRIGHTcoherent, marksisolated.157.5strongerhorizontalcue isreviewwarning, no wrongquadrant/reversal/visiblebodysnap; fullboundaryloopreviewpending.",
+    "file": "generated/look-row-9.png",
+    "sha256": "6a55c7c77f4de17a3c893be3f0d5ad2f07bd0d2e7c742c99b9d853994e09d6ca"
+  },
+  {
+    "id": "look-row-10",
+    "completed_at": "2026-10-13T06:56:53.205864+00:00",
+    "qa_note": "8groups/16whiteeyes allLEFTarc withcenteredDOWN, body/sourceheightmatchesROW9, sharedtransformandedgechecks pass.315/337eye-height/tilt minorwarning, no quadrant/reversal/contact/clipping.",
+    "file": "generated/look-row-10.png",
+    "sha256": "85aa27185bf3ae7d44f7c757c58ab5e1b87019b0e1f629bb757b49463ec34b9e"
+  },
+  {
+    "id": "running-left-anchor",
+    "file": "generated/running-left-anchor.png",
+    "role": "approved-left-direction-reference",
+    "sha256": "6b7966a70cd0b00df9957a48bf8fee98b49e9879226d10756f4d968b96e4e086",
+    "provenance": "recovered from selected completed generation record"
+  }
+]

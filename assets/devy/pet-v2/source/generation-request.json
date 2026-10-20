@@ -1,0 +1,118 @@
+{
+  "pet_id": "spica-improved-v2",
+  "display_name": "스피카 (개선판)",
+  "description": "매끈한 금빛 고리와 얼굴 오른쪽 위의 초승달·별을 가진 스피카 G.",
+  "created_at": "2026-10-13T06:07:50.637477+00:00",
+  "sprite_version_number": 2,
+  "atlas": {
+    "columns": 8,
+    "rows": 11,
+    "cell_width": 192,
+    "cell_height": 208,
+    "width": 1536,
+    "height": 2288
+  },
+  "rows": [
+    {
+      "state": "idle",
+      "row": 0,
+      "frames": 6,
+      "purpose": "calm resting, breathing, and blinking loop"
+    },
+    {
+      "state": "running-right",
+      "row": 1,
+      "frames": 8,
+      "purpose": "rightward drag movement loop"
+    },
+    {
+      "state": "running-left",
+      "row": 2,
+      "frames": 8,
+      "purpose": "leftward drag movement loop"
+    },
+    {
+      "state": "waving",
+      "row": 3,
+      "frames": 4,
+      "purpose": "greeting or attention gesture"
+    },
+    {
+      "state": "jumping",
+      "row": 4,
+      "frames": 5,
+      "purpose": "hover or playful jump"
+    },
+    {
+      "state": "failed",
+      "row": 5,
+      "frames": 8,
+      "purpose": "blocked, failed, or cancelled reaction"
+    },
+    {
+      "state": "waiting",
+      "row": 6,
+      "frames": 6,
+      "purpose": "waiting for approval, help, or user input"
+    },
+    {
+      "state": "running",
+      "row": 7,
+      "frames": 6,
+      "purpose": "active task work or processing"
+    },
+    {
+      "state": "review",
+      "row": 8,
+      "frames": 6,
+      "purpose": "ready or completed output review"
+    },
+    {
+      "state": "look-row-9",
+      "row": 9,
+      "frames": 8,
+      "directions": [
+        "000",
+        "022.5",
+        "045",
+        "067.5",
+        "090",
+        "112.5",
+        "135",
+        "157.5"
+      ],
+      "purpose": "clockwise look directions from up through down-right"
+    },
+    {
+      "state": "look-row-10",
+      "row": 10,
+      "frames": 8,
+      "directions": [
+        "180",
+        "202.5",
+        "225",
+        "247.5",
+        "270",
+        "292.5",
+        "315",
+        "337.5"
+      ],
+      "purpose": "clockwise look directions from down through up-left"
+    }
+  ],
+  "chroma_key": {
+    "hex": "#00FFFF",
+    "rgb": [
+      0,
+      255,
+      255
+    ],
+    "name": "cyan",
+    "selection": "auto",
+    "score": 226.78
+  },
+  "pet_notes": "Authoritative identity is Spica G version2.0.0. Smooth FULLY CLOSED pale buttery-gold round ring, thick dark navy outline, opaque round navy face disk, exactly TWO white half-disc sleepy eyes with NO pupils, tiny knowing white smile, TWO small rounded gold feet. ONE gold classic crescent OPENING RIGHT with ONE four-point gold star nestled in opening, in upper-screen-right NAVY FACE above the right eye. Crescent and star must retain navy space around them, never touch ring or eyes, never connect to ring. Optional details present in base: upper-left ring three-dot constellation, lower-right Virgo glyph, two lilac cheek ticks per side. Flat clean illustration and cute/slightly suspicious sleepy mood. NO inward curl, spiral, ring breaks, hands, fingers, arms, finger-like protrusions, hats, props, clothing or extra stars. Never mirror because moon/star and Virgo placement are asymmetric. Animate by eyes/mouth, gentle body breathing and attached rounded feet. Wave only with a small lift/tilt of one LOWER foot attached at bottom rim; never grow an arm or use crescent as limb. Jump lift is SMALL, 8 percent of body height; body size stays identical to idle. In gaze rows body/feet/ring/marks are fixed; flat white eye pair/mouth/cheeks move naturally on navy surface, original eye design retained, BOTH eyes always visible and not overlapping moon/star.",
+  "style_preset": "sticker",
+  "style_notes": "Exact new G image: smooth closed ring, isolated gold crescent-plus-star inside face, navy thick contour, buttery-gold/navy/lilac, crisp flat illustration with minimal warm shading, no white sticker border, no shadow",
+  "style_contract": "Pet-safe sprite: compact full-body mascot, readable in a 192x208 cell, clear silhouette, simple face, stable palette/materials, and crisp edges for chroma-key extraction. Style `sticker`: Polished sticker mascot with bold clean shapes, crisp outline, flat colors, and minimal highlight detail. User style notes: Exact new G image: smooth closed ring, isolated gold crescent-plus-star inside face, navy thick contour, buttery-gold/navy/lilac, crisp flat illustration with minimal warm shading, no white sticker border, no shadow."
+}

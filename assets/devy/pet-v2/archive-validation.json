@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-20",
+  "scope": "Archive integrity only; existing artwork and historical QA preserved without regeneration or application changes.",
+  "source_thread_title": "Codex Pet v2 자캐 버전 만들기",
+  "sprite_version": 2,
+  "atlas_sha256": "402c778d07030a6c8a36955548fbad659a9274ad2c9d9e8c0906a37064005637",
+  "exported_frames": 73,
+  "generated_source_images": 14,
+  "webp_png_decoded_pixels_equal": true,
+  "all_exported_frames_match_atlas_pixels": true,
+  "all_15_unused_cells_transparent": true,
+  "historical_gate_summary": {
+    "atlas": true,
+    "quality": true,
+    "chroma": true,
+    "frames": true,
+    "blind": true,
+    "visual": "pass",
+    "native": true
+  },
+  "note": "Historical report strings use source-run, source-session, generated-images and local-pets placeholders instead of machine-specific absolute paths.",
+  "recovered_generation_prompts": 14
+}

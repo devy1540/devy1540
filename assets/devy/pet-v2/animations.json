@@ -1,0 +1,279 @@
+{
+  "spriteVersionNumber": 2,
+  "spritesheet": "spritesheet.webp",
+  "spritesheet_sha256": "402c778d07030a6c8a36955548fbad659a9274ad2c9d9e8c0906a37064005637",
+  "png": "spritesheet.png",
+  "columns": 8,
+  "rows": 11,
+  "cell_width": 192,
+  "cell_height": 208,
+  "used_frames": 73,
+  "unused_transparent_cells": 15,
+  "coordinates": "zero-based row and column; top-left origin",
+  "look_direction_convention": "viewer coordinates; 0 up, 90 screen-right, 180 down, 270 screen-left, clockwise",
+  "neutral_frame": {
+    "row": 0,
+    "column": 0
+  },
+  "timing_note": "Durations are recovered from saved GIF previews, not a guarantee of current application playback timing. Look directions are static poses, not a running animation.",
+  "states": [
+    {
+      "state": "idle",
+      "row": 0,
+      "frames": 6,
+      "purpose": "calm resting, breathing, and blinking loop",
+      "frame_files": [
+        "frames/idle/00.png",
+        "frames/idle/01.png",
+        "frames/idle/02.png",
+        "frames/idle/03.png",
+        "frames/idle/04.png",
+        "frames/idle/05.png"
+      ],
+      "preview_frame_durations_ms": [
+        280,
+        110,
+        110,
+        140,
+        140,
+        320
+      ]
+    },
+    {
+      "state": "running-right",
+      "row": 1,
+      "frames": 8,
+      "purpose": "rightward drag movement loop",
+      "frame_files": [
+        "frames/running-right/00.png",
+        "frames/running-right/01.png",
+        "frames/running-right/02.png",
+        "frames/running-right/03.png",
+        "frames/running-right/04.png",
+        "frames/running-right/05.png",
+        "frames/running-right/06.png",
+        "frames/running-right/07.png"
+      ],
+      "preview_frame_durations_ms": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ]
+    },
+    {
+      "state": "running-left",
+      "row": 2,
+      "frames": 8,
+      "purpose": "leftward drag movement loop",
+      "frame_files": [
+        "frames/running-left/00.png",
+        "frames/running-left/01.png",
+        "frames/running-left/02.png",
+        "frames/running-left/03.png",
+        "frames/running-left/04.png",
+        "frames/running-left/05.png",
+        "frames/running-left/06.png",
+        "frames/running-left/07.png"
+      ],
+      "preview_frame_durations_ms": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ]
+    },
+    {
+      "state": "waving",
+      "row": 3,
+      "frames": 4,
+      "purpose": "greeting or attention gesture",
+      "frame_files": [
+        "frames/waving/00.png",
+        "frames/waving/01.png",
+        "frames/waving/02.png",
+        "frames/waving/03.png"
+      ],
+      "preview_frame_durations_ms": [
+        140,
+        140,
+        140,
+        280
+      ]
+    },
+    {
+      "state": "jumping",
+      "row": 4,
+      "frames": 5,
+      "purpose": "hover or playful jump",
+      "frame_files": [
+        "frames/jumping/00.png",
+        "frames/jumping/01.png",
+        "frames/jumping/02.png",
+        "frames/jumping/03.png",
+        "frames/jumping/04.png"
+      ],
+      "preview_frame_durations_ms": [
+        140,
+        140,
+        140,
+        140,
+        280
+      ]
+    },
+    {
+      "state": "failed",
+      "row": 5,
+      "frames": 8,
+      "purpose": "blocked, failed, or cancelled reaction",
+      "frame_files": [
+        "frames/failed/00.png",
+        "frames/failed/01.png",
+        "frames/failed/02.png",
+        "frames/failed/03.png",
+        "frames/failed/04.png",
+        "frames/failed/05.png",
+        "frames/failed/06.png",
+        "frames/failed/07.png"
+      ],
+      "preview_frame_durations_ms": [
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        240
+      ]
+    },
+    {
+      "state": "waiting",
+      "row": 6,
+      "frames": 6,
+      "purpose": "waiting for approval, help, or user input",
+      "frame_files": [
+        "frames/waiting/00.png",
+        "frames/waiting/01.png",
+        "frames/waiting/02.png",
+        "frames/waiting/03.png",
+        "frames/waiting/04.png",
+        "frames/waiting/05.png"
+      ],
+      "preview_frame_durations_ms": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        260
+      ]
+    },
+    {
+      "state": "running",
+      "row": 7,
+      "frames": 6,
+      "purpose": "active task work or processing",
+      "frame_files": [
+        "frames/running/00.png",
+        "frames/running/01.png",
+        "frames/running/02.png",
+        "frames/running/03.png",
+        "frames/running/04.png",
+        "frames/running/05.png"
+      ],
+      "preview_frame_durations_ms": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ]
+    },
+    {
+      "state": "review",
+      "row": 8,
+      "frames": 6,
+      "purpose": "ready or completed output review",
+      "frame_files": [
+        "frames/review/00.png",
+        "frames/review/01.png",
+        "frames/review/02.png",
+        "frames/review/03.png",
+        "frames/review/04.png",
+        "frames/review/05.png"
+      ],
+      "preview_frame_durations_ms": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        280
+      ]
+    },
+    {
+      "state": "look-row-9",
+      "row": 9,
+      "frames": 8,
+      "directions": [
+        "000",
+        "022.5",
+        "045",
+        "067.5",
+        "090",
+        "112.5",
+        "135",
+        "157.5"
+      ],
+      "purpose": "clockwise look directions from up through down-right",
+      "frame_files": [
+        "frames/look-row-9/000.png",
+        "frames/look-row-9/022.5.png",
+        "frames/look-row-9/045.png",
+        "frames/look-row-9/067.5.png",
+        "frames/look-row-9/090.png",
+        "frames/look-row-9/112.5.png",
+        "frames/look-row-9/135.png",
+        "frames/look-row-9/157.5.png"
+      ],
+      "preview_frame_durations_ms": null
+    },
+    {
+      "state": "look-row-10",
+      "row": 10,
+      "frames": 8,
+      "directions": [
+        "180",
+        "202.5",
+        "225",
+        "247.5",
+        "270",
+        "292.5",
+        "315",
+        "337.5"
+      ],
+      "purpose": "clockwise look directions from down through up-left",
+      "frame_files": [
+        "frames/look-row-10/180.png",
+        "frames/look-row-10/202.5.png",
+        "frames/look-row-10/225.png",
+        "frames/look-row-10/247.5.png",
+        "frames/look-row-10/270.png",
+        "frames/look-row-10/292.5.png",
+        "frames/look-row-10/315.png",
+        "frames/look-row-10/337.5.png"
+      ],
+      "preview_frame_durations_ms": null
+    }
+  ]
+}

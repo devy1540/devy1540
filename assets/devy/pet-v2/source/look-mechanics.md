@@ -1,0 +1,12 @@
+# Spica G look mechanics
+The updated G master is a flat ink face on an opaque navy disk in a smooth CLOSED gold ring. The gold crescent opening right and its single four-point star are face-surface markings fixed in the upper-screen-right navy area, not a body appendage. Keep the mark separated from ring and eyes by navy pixels.
+
+Anchored: ring center and outline, both feet, upper-left constellation, lower-right Virgo, gold crescent/star. All remain the same height/position in each look slot. No whole-ring turntable, rotation, tilt, mirrors or old inward curl.
+
+Gaze mechanism: move both original WHITE HALF-DISC eye surfaces, tiny mouth and optional cheek ticks together around the navy disk. Keep two eyes in ALL frames with no pupils, nose, new eyebrows, replacement round eyes or face proportion changes. Eye spacing/size remains like canonical. Slight eyelid reshaping accompanies the complete face cluster movement. The crescent/star stay above the right eye and do not move with the eye cluster; leave a visible navy gap to the signature and rim.
+
+Use a restrained approximately10-12 native-pixel face-cluster radius to allow the upper-right mark safe clearance. 000: white eye pair/mouth clearly high, still below separated gold mark;090: whole face cluster shifted right;180: eyes/mouth clearlylow;270: wholeface cluster shiftedleft. Every cardinal must be unmistakable from the whole eye/mouth cluster relative to disk center. Diagonals interpolate with both signed axes; near-vertical/horizontal components may be subtle but never reverse. Keep silhouette front-facing, body size/baseline and footer anchor unchanged. Even22.5degree progression, including157.5to180 and337.5to000.
+
+If clearance to the gold mark becomes tight, reduce face travel consistently across the entire family rather than hiding an eye, moving the gold mark into the ring or adding pupils. Always retain the icon's crescent-plus-one-star signature at normal pet size. Cardinals need label-free readability, while intermediate similarity is an ordered-loop review concern.
+
+Independent native-cardinal review approved modest sideglance eye-gap tightening as natural attention-expression change with BOTH originalwhitehalf-disc eyes and Gpersona intact. Match the APPROVED cardinal family and interpolate spacing gradually rather than imposing rigid numeric spacing. All4cardinals unequivocal. UPsignature clear NAVYgap is mandatory; the parent5px heuristic is advisory and a visible2-3px gap withoutcontact is acceptable. No majorclipping/merge/identityfailure may be waived.

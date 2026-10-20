@@ -1,0 +1,94 @@
+{
+  "status": "historical design; superseded by Spica G",
+  "pet": {
+    "id": "spica",
+    "displayName": "스피카",
+    "description": "별자리를 모으는 졸리고 순한 금빛 고리 마스코트 스피카.",
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "spritesheet.webp"
+  },
+  "spritesheet_sha256": "a658b7faaf5b38596744673c5058cc92bc1dd21bf19bb039613a8c489a62707b",
+  "original_package_validation": {
+    "ok": true,
+    "pet_name": "스피카",
+    "spriteVersionNumber": 2,
+    "required_frames": 73,
+    "unused_transparent_cells": 15,
+    "installed_package": "local-pets/spica",
+    "spritesheet_sha256": "a658b7faaf5b38596744673c5058cc92bc1dd21bf19bb039613a8c489a62707b",
+    "encoded_bytes": 2380826,
+    "completed_at": "2026-10-13T02:14:39.960504+00:00",
+    "gates": {
+      "atlas": true,
+      "quality": true,
+      "chroma": true,
+      "frames": true,
+      "blind": true,
+      "visual": "pass",
+      "native": true
+    },
+    "accepted_warnings": [
+      "022.5의 오른쪽 성분은 미세하지만 라벨 순서에서 반전은 없다.",
+      "292.5의 위쪽 성분은 미세하지만 라벨 순서에서 반전은 없다.",
+      "시선 프레임 아래쪽 투명 영역은 두 발 사이의 열린 여백이며 얼굴 내부 구멍이 아니다."
+    ],
+    "jump": {
+      "idle_baseline": 192,
+      "jump_baselines": [
+        196,
+        192,
+        183,
+        191,
+        196
+      ],
+      "airborne_lift_pixels": 13,
+      "landing_delta_pixels": 4
+    },
+    "look_registration": {
+      "neutral_center_x": 96.0,
+      "look_centers_x": [
+        95.5,
+        95.0,
+        95.0,
+        95.0,
+        95.0,
+        95.5,
+        95.5,
+        95.5,
+        95.5,
+        95.5,
+        94.5,
+        95.5,
+        94.5,
+        95.5,
+        95.5,
+        95.5
+      ],
+      "look_widths": [
+        171,
+        170,
+        172,
+        172,
+        172,
+        171,
+        173,
+        173,
+        171,
+        171,
+        171,
+        171,
+        171,
+        171,
+        173,
+        173
+      ],
+      "maximum_center_drift_pixels": 1.5,
+      "maximum_width_ratio": 1.0176470588235293
+    },
+    "visual_qa": "source-session/work/spica-pet-v2/qa/final-visual-qa.json",
+    "direction_semantics": "source-session/work/spica-pet-v2/qa/direction-semantics.json",
+    "direction_blind_validation": "source-session/work/spica-pet-v2/qa/direction-blind-validation.json",
+    "continuity": "source-session/work/spica-pet-v2/qa/look-continuity.json",
+    "revision2_proof": "source-session/work/spica-pet-v2/qa/revision2-change-proof.json"
+  }
+}

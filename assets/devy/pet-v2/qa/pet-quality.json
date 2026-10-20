@@ -1,0 +1,83 @@
+{
+  "ok": true,
+  "atlas": "source-run/final/spritesheet-extended.webp",
+  "encoded_bytes": 2533782,
+  "sha256": "402c778d07030a6c8a36955548fbad659a9274ad2c9d9e8c0906a37064005637",
+  "jump": {
+    "idle_baseline": 194,
+    "jump_baselines": [
+      201,
+      191,
+      180,
+      190,
+      201
+    ],
+    "airborne_lift_pixels": 21,
+    "landing_delta_pixels": 7
+  },
+  "look_registration": {
+    "neutral_center_x": 96.0,
+    "look_centers_x": [
+      96.0,
+      95.0,
+      96.0,
+      96.0,
+      95.0,
+      96.0,
+      95.0,
+      95.0,
+      96.0,
+      95.5,
+      96.0,
+      96.0,
+      95.5,
+      96.0,
+      96.0,
+      95.0
+    ],
+    "look_widths": [
+      172,
+      172,
+      172,
+      172,
+      172,
+      172,
+      172,
+      172,
+      172,
+      173,
+      172,
+      172,
+      173,
+      172,
+      172,
+      172
+    ],
+    "maximum_center_drift_pixels": 1.0,
+    "maximum_width_ratio": 1.005813953488372
+  },
+  "errors": [],
+  "warnings": [
+    "look direction 022.5 accepted with a reviewed warning",
+    "look direction 067.5 accepted with a reviewed warning",
+    "look direction 292.5 accepted with a reviewed warning",
+    "000 has transparent interior hole rows (y=181, y=182, y=183, y=184, +8 more)",
+    "022.5 has transparent interior hole rows (y=181, y=182, y=183, y=184, +8 more)",
+    "045 has transparent interior hole rows (y=181, y=182, y=183, y=184, +8 more)",
+    "067.5 has transparent interior hole rows (y=181, y=182, y=183, y=184, +8 more)",
+    "090 has transparent interior hole rows (y=181, y=182, y=183, y=184, +8 more)",
+    "112.5 has transparent interior hole rows (y=181, y=182, y=183, y=184, +8 more)",
+    "135 has transparent interior hole rows (y=181, y=182, y=183, y=184, +8 more)",
+    "157.5 has transparent interior hole rows (y=181, y=182, y=183, y=184, +8 more)",
+    "180 has transparent interior hole rows (y=181, y=182, y=183, y=184, +8 more)",
+    "202.5 has transparent interior hole rows (y=181, y=182, y=183, y=184, +8 more)",
+    "225 has transparent interior hole rows (y=181, y=182, y=183, y=184, +8 more)",
+    "247.5 has transparent interior hole rows (y=180, y=181, y=182, y=183, +9 more)",
+    "270 has transparent interior hole rows (y=181, y=182, y=183, y=184, +8 more)",
+    "292.5 has transparent interior hole rows (y=181, y=182, y=183, y=184, +8 more)",
+    "315 has transparent interior hole rows (y=181, y=182, y=183, y=184, +8 more)",
+    "337.5 has transparent interior hole rows (y=181, y=182, y=183, y=184, +8 more)",
+    "022.5->045 diff is a local outlier (760 pixels vs neighbor average 498)",
+    "157.5->180 diff is a local outlier (905 pixels vs neighbor average 370)"
+  ]
+}
